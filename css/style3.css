@@ -527,6 +527,12 @@ footer .footer-widget .social-links {
 footer .footer-widget .social-links li {
 	display: inline-block;
 }
+footer .footer-widget .social-links li a {
+    color: #656565;
+}
+footer .footer-widget .social-links li:hover a {
+    color: #CFB956;
+}
 footer .footer-widget hr {
 	width: 40%;
     opacity: 0.5;
@@ -682,11 +688,11 @@ footer .footer-widget:nth-child(2),
 footer .footer-widget:nth-child(3) {
 	text-align: center;
 }
-footer .footer-widget:last-child {
+footer .footer-widget:last-of-type {
 	text-align: right;
 }
 footer .sub-footer {
-	text-align: initial;
+	text-align: left;
 }
 footer .copyright {
 	text-align: right;
@@ -700,4 +706,4 @@ footer .copyright {
 	width: 90%;
 }
 
-
+}
