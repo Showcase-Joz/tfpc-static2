@@ -419,7 +419,7 @@ section .interest-box {
   position: relative;
 	padding: 0;
 	width: 100.1%;
-	min-height: 220px;
+	min-height: 320px;
 	color: #ffffff;
 	font-size: 14px;
   text-align: center;
@@ -934,7 +934,10 @@ header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links li:f
 	text-transform: uppercase;
 }
 
-
+section .interest-box:nth-child(2),
+section .interest-box:nth-child(3) {
+  min-height: 270px;
+}
 
 footer .footer-widget {
 	line-height: 2em;
@@ -1003,7 +1006,7 @@ footer .copyright {
 	width: 90%;
 }
 section .interest-box img{
-  right: 0;
+  left: -30px;
   width: auto;
   height: 100%;
 }
@@ -1011,5 +1014,4 @@ section .interest-box .interest-content {
     width: 100%;
     left: 100%;
 }
-
 }
