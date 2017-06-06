@@ -2,6 +2,10 @@
 jQuery(document).ready(function($) {
 "use strict";
 
+
+    // set copyright year date
+    var currentYear=(new Date).getFullYear();
+    {$(".year").text(currentYear);}
 	
 		//add some elements with animate effect
 

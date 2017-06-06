@@ -81,10 +81,6 @@ h1,h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
-}
 
 
 
@@ -187,6 +183,19 @@ h1,h2, h3, h4, h5, h6 {
 .hr-dark {
 	border-top: 1px solid #656565;
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #FFE985;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #FFE985;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #FFE985;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #FFE985;
+}
+
 #wrapper {
 	width: 100%;
 	margin: 0;
@@ -362,7 +371,7 @@ section#partners .partner-slider {
 section#partners .partner-slider-controls {
 	position: absolute;
 	right: 25px;
-	top: 5px;
+	top: -40px;
 }
 section#partners .owl-item{
 	margin:0 10px;
@@ -543,9 +552,15 @@ footer .sub-footer {
 footer .sub-footer-text {
 	color: #656565;
 }
-footer .copyright,
-footer .sub-footer-text {
-	font-size: 12px;
+footer .copyright strong {
+  font-size: 17px;
+  position: relative;
+  top: 3px;
+  right: 1px;
+}
+footer .sub-footer .copyright,
+footer .sub-footer li a.sub-footer-text {
+	font-size: 12px !important;
 	line-height: 1.1em;
 	transition: 300ms all ease-in-out;
 }
@@ -559,6 +574,19 @@ footer .sub-footer-text:hover {
 
 
 /* ADDITIONAL TYPOGRAPHY */
+
+.footer-widget::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:18px !important;
+}
+.footer-widget::-moz-placeholder { /* Firefox 19+ */
+  font-size:18px !important;
+}
+.footer-widget:-ms-input-placeholder { /* IE 10+ */
+  font-size:18px !important;
+}
+.footer-widget:-moz-placeholder { /* Firefox 18- */
+  font-size:18px !important;
+}
 
 .lead {
 	font-size: 16px;
@@ -627,11 +655,91 @@ a.scrollBtn:hover i {
 	color: #bdeb7b;
 }
 
+footer .footer-widget button {
+    background-color: #2e2d2d;
+    color: #666;
+    border: none;
+    padding: 8.3px 10px;
+    width: 35%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    color: #f7f7f7;
+}
+footer .footer-widget button:hover {
+  color: #FFE985;
+}
+.btn-purple { 
+  color: #ffffff; 
+  background-color: #8065B2; 
+  border-color: #5C438D; 
+} 
+ 
+.btn-purple:hover, 
+.btn-purple:focus, 
+.btn-purple:active, 
+.btn-purple.active, 
+.open .dropdown-toggle.btn-purple { 
+  color: #ffffff; 
+  background-color: #5C438D; 
+  border-color: #8065B2; 
+} 
+ 
+.btn-purple:active, 
+.btn-purple.active, 
+.open .dropdown-toggle.btn-purple { 
+  background-image: none; 
+} 
+ 
+.btn-purple.disabled, 
+.btn-purple[disabled], 
+fieldset[disabled] .btn-purple, 
+.btn-purple.disabled:hover, 
+.btn-purple[disabled]:hover, 
+fieldset[disabled] .btn-purple:hover, 
+.btn-purple.disabled:focus, 
+.btn-purple[disabled]:focus, 
+fieldset[disabled] .btn-purple:focus, 
+.btn-purple.disabled:active, 
+.btn-purple[disabled]:active, 
+fieldset[disabled] .btn-purple:active, 
+.btn-purple.disabled.active, 
+.btn-purple[disabled].active, 
+fieldset[disabled] .btn-purple.active { 
+  background-color: #8065B2; 
+  border-color: #8065B2; 
+} 
+ 
+.btn-purple .badge { 
+  color: #8065B2; 
+  background-color: #ffffff; 
+}
 
 /* FORMS */
 
+footer .footer-widget form {
+  text-align:center;
+}
 
-
+footer .footer-widget form input {
+  background-color: #565252;
+  font-size: 0.9rem;
+  color: #f9ef6b !important;
+  border: none;
+  width: 50%;
+  padding: 8px;
+  border-radius: 0px;
+  -webkit-transition: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: initial;
+}
+footer .footer-widget button {
+  position: relative;
+  display: inherit;
+  width: 50%;
+}
 /* MISC */
 
 
@@ -658,10 +766,10 @@ header .navbar .nav > li > a::after {
 }
 header .navbar .nav li> a:hover:not(.except-this)::after {
   	width: 100%;
+}
+header .navbar-nav li:hover:after {
+    display: none;
   }
-  header .navbar-nav li:hover:after {
-        display: none;
-    }
 }
 
 @media (min-width: 992px) {
@@ -690,6 +798,18 @@ footer .footer-widget:nth-child(3) {
 }
 footer .footer-widget:last-of-type {
 	text-align: right;
+}
+footer .footer-widget form {
+  text-align:left;
+}
+footer .footer-widget form input {
+  width: 158px;
+  display: inline-block;
+}
+footer .footer-widget button {
+  display: inline-block;
+  width: initial;
+  position: absolute;
 }
 footer .sub-footer {
 	text-align: left;
