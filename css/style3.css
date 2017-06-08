@@ -75,7 +75,14 @@ h1,h2, h3, h4, h5, h6 {
 .clear {
 	clear:both !important;
 }
-
+#wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px !important;
+}
 .container {
 	padding: 0 20px 0 20px;
     position: relative;
@@ -218,12 +225,6 @@ h1,h2, h3, h4, h5, h6 {
 }
 :-moz-placeholder { /* Firefox 18- */
   color: #FFE985;
-}
-
-#wrapper {
-	width: 100%;
-	margin: 0;
-	padding: 0;
 }
 
 .corner-ribbon{
@@ -684,7 +685,7 @@ section#partners .item:hover img {
 /* ++++++++++++ Footer */
 
 footer {
-  margin: 50px 0 0 0;
+  margin: 0;
   padding-bottom: 20px;
 	background-color: #1f1f1f;
 }
@@ -785,8 +786,6 @@ footer .copyright:hover {
   text-transform: uppercase;
   letter-spacing: 3px;
   word-spacing: 6px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
   padding: 40px;
   color: #fff;
 }
@@ -1347,13 +1346,6 @@ footer .footer-widget button {
        column-fill: balance;
 }
 .pop-statement {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  word-spacing: 6px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 40px;
-  color: #fff;
   margin: auto -80px;
 }
 }
