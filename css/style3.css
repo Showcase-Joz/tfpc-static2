@@ -479,6 +479,9 @@ section .interest-box {
   overflow: hidden;
   transition: 300ms all ease-in-out;
 }
+section .interest-box h2 {
+  font-size: 26px;
+}
 section .interest-box img{
   position: absolute;
   left: 0;
@@ -1293,7 +1296,9 @@ footer .copyright {
 .container {
 	width: 90%;
 }
-
+section [class*='col-lg'] h2 {
+  font-size: 22px;
+}
 section .interest-box img{
   left: -30px;
   width: auto;
