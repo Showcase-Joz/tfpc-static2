@@ -3,9 +3,12 @@ jQuery(document).ready(function($) {
 "use strict";
 
 
-    // set copyright year date
-    var currentYear=(new Date).getFullYear();
-    {$(".year").text(currentYear);}
+	    // set copyright year date
+	    var currentYear=(new Date).getFullYear();
+	    {$(".year").text(currentYear);}
+
+	    // disable button if bigger than
+	   
 	
 		//add some elements with animate effect
 

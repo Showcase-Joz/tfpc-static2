@@ -452,17 +452,21 @@ section .interest-box .interest-content {
 section .interest-box .interest-content .btn-interest-content {
   position: absolute;
   bottom: 10px;
-  right: 20%;
+  right: 14%;
   left: initial;
   text-transform: uppercase;
   transition: 300ms all ease-in-out;
 }
 section .interest-box .interest-content .interest-content-inner {
-    width: 85%;
+    width: 90%;
     text-align: justify;
     text-align-last: right;
     opacity: 0;
     transition: 1200ms opacity ease-in-out;
+}
+section .interest-box .interest-content .interest-content-inner p {
+  font-size: 18px;
+  line-height: 1.6em;
 }
 section .interest-box:hover  { 
   background-color: transparent;
@@ -746,6 +750,21 @@ footer .copyright:hover {
 	font-weight: 300;
 	line-height: 1.6em;
 }
+p.text-columns {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count:    2; /* Firefox */
+  column-count:         2;
+  -webkit-column-gap:   20px; /* Chrome, Safari, Opera */ 
+  -moz-column-gap:      20px; /* Firefox */
+  column-gap:           20px;
+  column-rule-color: #ccc; /* Optional */
+  column-rule-style:solid; /* Optional */
+  column-rule-width: 1px; /* Optional */
+  text-align: justify; /* Optional */
+  -webkit-column-fill: balance; /* Chrome, Safari, Opera */
+  -moz-column-fill: balance; /* Firefox */
+  column-fill: balance;
+}
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -755,6 +774,10 @@ q:before {
 }
 q:after {
     content: close-quote;
+}
+.justify-end {
+  text-align: justify;
+  text-align-last: right;
 }
 
 /* LINKS */
@@ -1118,6 +1141,10 @@ section .interest-box .interest-content .btn-interest-content {
   left: 15px;
   right: initial;
 }
+section .interest-box .interest-content .interest-content-inner p {
+  font-size: initial;
+  line-height: initial;
+}
 footer .footer-widget {
     line-height: 2em;
     font-size: 12px;
@@ -1199,6 +1226,20 @@ footer .copyright {
 
 .container {
 	width: 90%;
+}
+.jumbobox p.text-columns {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count:    3; /* Firefox */
+  column-count:         3;
+    -webkit-column-gap:   40px; /* Chrome, Safari, Opera */ 
+  -moz-column-gap:      40px; /* Firefox */
+  column-gap:           40px;
+  column-rule-color: #ccc; /* Optional */
+  column-rule-style:solid; /* Optional */
+  column-rule-width: 2px; /* Optional */
+  text-align: justify; /* Optional */
+  -moz-column-fill: balance;
+       column-fill: balance;
 }
 section .interest-box img{
   left: -30px;
