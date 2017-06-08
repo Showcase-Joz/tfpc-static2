@@ -28,16 +28,26 @@ jQuery(document).ready(function($) {
 			}
 		);
 		
+		/* truncate content overview */
+
 		  /*Clients Slider*/  
 		  if ($('#partner-slider').length){
 			  var owlPartner = $("#partner-slider"); 
 			  owlPartner.owlCarousel({
 				  autoPlay: 5000,
-				  items : 4, //10 items above 1000px browser width
-				  itemsDesktop : [1000,6], //5 items between 1000px and 901px
-				  itemsDesktopSmall : [900,5], // betweem 900px and 601px
-				  itemsTablet: [600,4], //2 items between 600 and 0
-				  itemsMobile : [400,3] // itemsMobile disabled - inherit from itemsTablet option
+				  loop:true,
+				  autoWidth:true,
+				  items:4,
+				  stagePadding: 50,
+			  	0:{
+		            items:1
+		        },
+		        600:{
+		            items:2
+		        },
+		        768:{
+		            items:3
+		        }
 			  });
 		  }
 		 

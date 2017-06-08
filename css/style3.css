@@ -268,13 +268,13 @@ header .navbar-brand {
     padding: 15px 0;
 }
 header .navbar-brand {
-    color: #ffffff;
+  color: #ffffff;
 	text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.6em;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6em;
 	letter-spacing: 0px; 
-    padding: 12px 0 0 15px;
+  padding: 12px 0 0 15px;
 }
 header .navbar-default .navbar-brand{
 	color: #8065B2;
@@ -445,10 +445,18 @@ section .interest-box .interest-content {
   position: absolute;
   left: -60%;
   padding: 14px 20px;
+  border-top-left-radius: 0px;
   transition: 600ms all ease-in-out;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f7f7+88,000000+100 */
 }
-
+section .interest-box .interest-content .btn-interest-content {
+  position: absolute;
+  bottom: 10px;
+  right: 20%;
+  left: initial;
+  text-transform: uppercase;
+  transition: 300ms all ease-in-out;
+}
 section .interest-box .interest-content .interest-content-inner {
     width: 85%;
     text-align: justify;
@@ -558,16 +566,18 @@ right:0px;
    -webkit-text-fill-color: rgba(92, 67,141,0.7); /* Will override color (regardless of order) */
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: white;
-	margin-bottom: 45px;
+	margin-bottom: 25px;
 	text-transform: uppercase;
 	font-size: 46px;
 	font-weight: bold;
 }
 .flex-caption p {
-	margin: 12px 0 56px;
-	font-size: 20px;
-	color: #4a4a4a;
-	display: none;
+	margin: 0px 0 5px;
+  font-size: 24px;
+  color: #4a4a4a;
+  display: block;
+  line-height: 1em;
+
 }
 
 .flex-control-nav li{
@@ -587,7 +597,11 @@ right:0px;
 
 /* ++++++++++++++++++++++++ Owl Carousel --- */
 
-
+section#partners .item img,
+section#partners .item:hover img {
+    text-align: center;
+    margin: auto;
+}
 
 
 /* ++++++++++++++++++++++++ END Owl Carousel --- */
@@ -621,21 +635,26 @@ footer .footer-widget {
 	line-height: 2em;
   font-size: 18px;
 }
+footer .footer-widget h5 {
+  font-size: 16px;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
 footer .footer-widget:not(:first-child) h5 {
 	text-transform: uppercase;
 }
 footer .footer-widget h6 {
 	text-transform: uppercase;
-    word-spacing: 5px;
-    letter-spacing: 2px;
-    color: #656565!important;
-    margin-top: -10px !important;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  color: #656565!important;
+  margin-top: -10px !important;
 }
 footer .footer-widget ul.footer-products {
 	list-style: none;
-    padding-left: 0;
-    letter-spacing: 1px;
-    word-spacing: 1px;
+  padding-left: 0;
+  letter-spacing: 1px;
+  word-spacing: 1px;
 }
 footer .footer-widget ul.footer-products li a {
 	color: inherit;
@@ -665,6 +684,12 @@ footer .footer-widget hr {
 footer .sub-footer {
 	text-align: center;
 }
+footer .sub-footer ul li {
+  display: block;
+}
+footer .sub-footer ul li:after {
+  content: none;
+}
 footer .sub-footer-text {
 	color: #656565;
 }
@@ -675,6 +700,7 @@ footer .copyright strong {
   right: 1px;
 }
 footer .sub-footer .copyright,
+footer .sub-footer li.company-reg,
 footer .sub-footer li a.sub-footer-text {
 	font-size: 12px !important;
 	line-height: 1.1em;
@@ -684,6 +710,9 @@ footer .copyright:hover,
 footer .sub-footer-text:hover {
 	color: #CFB956;
 	cursor: help;
+}
+footer .copyright:hover {
+  cursor: default;
 }
 /* ++++++++++++ END Footer  */
 
@@ -707,13 +736,26 @@ footer .sub-footer-text:hover {
   font-size:18px !important;
   text-align: center;
 }
-
+.lead-big {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6em;
+}
 .lead {
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.6em;
 }
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
 
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}
 
 /* LINKS */
 
@@ -794,10 +836,142 @@ footer .footer-widget button {
 footer .footer-widget button:hover {
   color: #FFE985;
 }
+
+/* ++++++++++++ Standard Buttons  */
+
+.btn-yellow { 
+  color: #959595; 
+  background-color: #FFE985; 
+  border-color: #FFE985; 
+} 
+.btn-yellow:hover, 
+.btn-yellow:focus, 
+.btn-yellow:active, 
+.btn-yellow.active, 
+.open .dropdown-toggle.btn-yellow { 
+  color: #959595; 
+  background-color: #CFB956; 
+  border-color: #FFE985; 
+} 
+.btn-yellow:active, 
+.btn-yellow.active, 
+.open .dropdown-toggle.btn-yellow { 
+  background-image: none; 
+} 
+.btn-yellow.disabled, 
+.btn-yellow[disabled], 
+fieldset[disabled] .btn-yellow, 
+.btn-yellow.disabled:hover, 
+.btn-yellow[disabled]:hover, 
+fieldset[disabled] .btn-yellow:hover, 
+.btn-yellow.disabled:focus, 
+.btn-yellow[disabled]:focus, 
+fieldset[disabled] .btn-yellow:focus, 
+.btn-yellow.disabled:active, 
+.btn-yellow[disabled]:active, 
+fieldset[disabled] .btn-yellow:active, 
+.btn-yellow.disabled.active, 
+.btn-yellow[disabled].active, 
+fieldset[disabled] .btn-yellow.active { 
+  background-color: #FFE985; 
+  border-color: #FFE985; 
+}
+.btn-yellow .badge { 
+  color: #FFE985; 
+  background-color: #959595; 
+}
+
+
+.btn-green { 
+  color: #959595; 
+  background-color: #BDEB7B; 
+  border-color: #BDEB7B; 
+} 
+.btn-green:hover, 
+.btn-green:focus, 
+.btn-green:active, 
+.btn-green.active, 
+.open .dropdown-toggle.btn-green { 
+  color: #959595; 
+  background-color: #91be4f; 
+  border-color: #BDEB7B; 
+} 
+.btn-green:active, 
+.btn-green.active, 
+.open .dropdown-toggle.btn-green { 
+  background-image: none; 
+} 
+.btn-green.disabled, 
+.btn-green[disabled], 
+fieldset[disabled] .btn-green, 
+.btn-green.disabled:hover, 
+.btn-green[disabled]:hover, 
+fieldset[disabled] .btn-green:hover, 
+.btn-green.disabled:focus, 
+.btn-green[disabled]:focus, 
+fieldset[disabled] .btn-green:focus, 
+.btn-green.disabled:active, 
+.btn-green[disabled]:active, 
+fieldset[disabled] .btn-green:active, 
+.btn-green.disabled.active, 
+.btn-green[disabled].active, 
+fieldset[disabled] .btn-green.active { 
+  background-color: #BDEB7B; 
+  border-color: #BDEB7B; 
+} 
+.btn-green .badge { 
+  color: #BDEB7B; 
+  background-color: #959595; 
+}
+
+
+.btn-red { 
+  color: #FFFFFF; 
+  background-color: #FB8389; 
+  border-color: #FB8389; 
+} 
+.btn-red:hover, 
+.btn-red:focus, 
+.btn-red:active, 
+.btn-red.active, 
+.open .dropdown-toggle.btn-red { 
+  color: #FFFFFF; 
+  background-color: #cb545a; 
+  border-color: #FB8389; 
+} 
+.btn-red:active, 
+.btn-red.active, 
+.open .dropdown-toggle.btn-red { 
+  background-image: none; 
+} 
+.btn-red.disabled, 
+.btn-red[disabled], 
+fieldset[disabled] .btn-red, 
+.btn-red.disabled:hover, 
+.btn-red[disabled]:hover, 
+fieldset[disabled] .btn-red:hover, 
+.btn-red.disabled:focus, 
+.btn-red[disabled]:focus, 
+fieldset[disabled] .btn-red:focus, 
+.btn-red.disabled:active, 
+.btn-red[disabled]:active, 
+fieldset[disabled] .btn-red:active, 
+.btn-red.disabled.active, 
+.btn-red[disabled].active, 
+fieldset[disabled] .btn-red.active { 
+  background-color: #FB8389; 
+  border-color: #FB8389; 
+} 
+.btn-red .badge { 
+  color: #FB8389; 
+  background-color: #FFFFFF; 
+}
+
+
 .btn-purple { 
-  color: #ffffff; 
+  color: #FFFFFF; 
   background-color: #8065B2; 
-  border-color: #5C438D; 
+  border-color: #8065B2; 
 } 
  
 .btn-purple:hover, 
@@ -805,8 +979,8 @@ footer .footer-widget button:hover {
 .btn-purple:active, 
 .btn-purple.active, 
 .open .dropdown-toggle.btn-purple { 
-  color: #ffffff; 
-  background-color: #5C438D; 
+  color: #FFFFFF; 
+  background-color: #5c438d; 
   border-color: #8065B2; 
 } 
  
@@ -837,8 +1011,10 @@ fieldset[disabled] .btn-purple.active {
  
 .btn-purple .badge { 
   color: #8065B2; 
-  background-color: #ffffff; 
+  background-color: #FFFFFF; 
 }
+
+/* ++++++++++++ END Standard Buttons  */
 
 /* FORMS */
 
@@ -938,10 +1114,19 @@ section .interest-box:nth-child(2),
 section .interest-box:nth-child(3) {
   min-height: 270px;
 }
-
+section .interest-box .interest-content .btn-interest-content {
+  left: 15px;
+  right: initial;
+}
 footer .footer-widget {
-	line-height: 2em;
-  font-size: initial;
+    line-height: 2em;
+    font-size: 12px;
+}
+footer .footer-widget h5,
+footer .footer-widget h6 {
+  font-size: small;
+  letter-spacing: initial;
+  word-spacing: initial;
 }
 footer .footer-widget:first-child {
 	text-align: left;
@@ -957,14 +1142,13 @@ footer .footer-widget form {
   text-align:left;
 }
 footer .footer-widget form input {
-  width: 158px;
-  display: inline-block;
+  width: 100%;
+  display: block;
 }
 footer .footer-widget button {
   display: inline-block;
-  width: initial;
-  position: absolute;
-  width: 50%;
+    width: initial;
+    width: 100%;
 }
 footer .footer-widget .social-links {
   margin-top: -10px;
@@ -975,12 +1159,23 @@ footer .footer-widget .social-links li a {
     padding-right: initial;
     margin-top: initial;
 }
+footer .sub-footer ul li {
+  display: inline;
+}
+footer .sub-footer ul li:after {
+  content: ":";
+      padding-left: 10px;
+}
+footer .sub-footer ul li:last-child:after {
+  content: "";
+}
 footer .sub-footer {
 	text-align: left;
 }
 footer .copyright {
 	text-align: right;
 }
+
 
 /* MISC */
 
@@ -1013,5 +1208,26 @@ section .interest-box img{
 section .interest-box .interest-content {
     width: 100%;
     left: 100%;
+    border-top-left-radius: 100px;
+}
+footer .footer-widget {
+  line-height: 2em;
+  font-size: initial;
+}
+footer .footer-widget h5,
+footer .footer-widget h6 {
+  font-size: 14px;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+footer .footer-widget form input {
+  width: 158px;
+  display: inline-block;
+}
+footer .footer-widget button {
+  display: inline-block;
+  width: initial;
+  position: absolute;
+  width: 50%;
 }
 }
