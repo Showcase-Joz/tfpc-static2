@@ -1105,6 +1105,16 @@ fieldset[disabled] .btn-purple.active {
 
 /* FORMS */
 
+#contact-us .form-group #success_message {
+  display: none;
+}
+#contact-us .form-group #checkboxSuccess span {
+    font-style: italic;
+    font-size: x-small;
+    letter-spacing: 0.3px;
+    position: absolute;
+    top: 20px;
+}
 footer .footer-widget form {
   text-align:center;
 }

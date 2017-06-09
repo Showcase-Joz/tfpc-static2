@@ -132,7 +132,7 @@
 
   </head>
 
-  <body>
+  <body id="contact-us">
     <div id="wrapper" class="home">
     <!-- Header section -->
     <header>
@@ -220,6 +220,109 @@
                 <h2>Send us a message <i class="fa fa-commenting-o fa-lg pull-right"></i></h2>
                 
                   <p>Having a send off that suits you is everyone's last wish. Make the choices today! So your family don’t have to worry through their time of grieving.</p>
+                  <div class="col-xs-12">
+                      <form class="form-horizontal" action=" " method="post"  id="contact_form">
+                        <fieldset>
+                        
+                        <div class="row">
+                            <div class="col-xs-5">
+                              <!-- Text input-->
+                            
+                              <div class="form-group">
+                                <label class="control-label">First Name</label>  
+                                <div class="inputGroupContainer">
+                                <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                              
+                            <div class="col-xs-5 pull-right">
+                              <!-- Text input-->
+                              
+                              <div class="form-group">
+                                <label class="control-label" >Last Name</label> 
+                                  <div class="inputGroupContainer">
+                                  <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="control-label">E-Mail</label>  
+                            <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                          <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                        <!-- Text input-->
+                               
+                        <div class="form-group">
+                          <label class="control-label">Phone #</label>  
+                            <div class="inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                          <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Text area -->
+                          
+                        <div class="form-group">
+                          <label class="control-label">Message</label>
+                            <div class="inputGroupContainer">
+                              <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-terminal"></i></span>
+                              	<textarea class="form-control" rows="6" name="comment" placeholder="Write your message here"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-xs-5">
+                            <!-- Checkbox -->
+                            <div class="form-group">
+                              <div class="has-succes">
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox" id="checkboxSuccess" value="option1">
+                                    I'd like to stay informed!
+                                    <span>Add me to your mailing-list</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-xs-7 pull-right">
+                            
+                            <!-- Button -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-block btn-warning" >Send <span class="fa fa-send"></span></button>
+                            </div>
+                      
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <div class="alert alert-success" role="alert" id="success_message">Success <i class="fa fa-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+                        </div>
+                        
+                        </fieldset>
+                        </form>
+                  </div>
 
               </div>
 
