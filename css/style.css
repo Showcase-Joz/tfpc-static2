@@ -214,6 +214,11 @@ h1,h2, h3, h4, h5, h6 {
 .hr-dark {
 	border-top: 1px solid #656565;
 }
+.alert-green {
+    color: #91be4f;
+    background-color: #eff7d6;
+    border-color: #dbf2ba;
+}
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #FFE985;
 }
@@ -1105,10 +1110,34 @@ fieldset[disabled] .btn-purple.active {
 
 /* FORMS */
 
-#contact-us .form-group #success_message {
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+  color: #cb545a;
+}
+.has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
+  color: #91be4f;
+}
+.has-error .input-group-addon {
+    color: #cb545a;
+    background-color: #FCC2C5;
+    border-color: #cb545a;
+}
+.has-success .input-group-addon {
+    color: #91be4f;
+    background-color: #DBF2BA;
+    border-color: #91be4f;
+}
+#contact-us .form-group .help-block {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+}
+ #success_message {
   display: none;
 }
-#contact-us .form-group #checkboxSuccess span {
+#contact_form .form-control-feedback {
+    top: 40px;
+}
+#contact-us .form-group #checkboxSuccess ~ span {
     font-style: italic;
     font-size: x-small;
     letter-spacing: 0.3px;
