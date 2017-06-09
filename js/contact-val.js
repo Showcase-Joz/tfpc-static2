@@ -76,7 +76,7 @@ if("undefined"==typeof jQuery)throw new Error("BootstrapValidator requires jQuer
             }
         })
         .on('success.form.bv', function(e) {
-            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+            $('#success_message').slideDown('fast').delay(1000).fadeOut('slow').delay(7000)
                 $('#contact_form').data('bootstrapValidator').resetForm();
 
             // Prevent form submission

@@ -205,12 +205,6 @@ h1,h2, h3, h4, h5, h6 {
 .rgba-complement-3-100 { background-color: rgba(117, 95,161,1) }
 .rgba-complement-4-100 { background-color: rgba( 92, 67,141,1) }
 
-.text-light {
-	color: #ffffff;
-}
-.text-dark {
-	color: #656565 !important;
-}
 .hr-dark {
 	border-top: 1px solid #656565;
 }
@@ -1131,9 +1125,8 @@ fieldset[disabled] .btn-purple.active {
   margin-bottom: 0px;
 }
 }
- #success_message {
-  display: none;
-}
+#success_message { display: none;}
+#success_message{ display: none;}
 #contact_form .form-control-feedback {
     top: 40px;
 }
@@ -1169,10 +1162,23 @@ footer .footer-widget button {
 }
 /* MISC */
 
+.text-light, .text-hover-light:hover{
+  color: #ffffff;
+}
+.text-dark, .text-hover-dark:hover{
+  color: #656565 !important;
+}
 hr {
   border-top: 1px solid #ddd;
 }
-
+.google-map {
+    padding-left: 0;
+    padding-right: 0;
+}
+.google-map .map iframe {
+  width: 100%;
+  border:none;
+}
 
 /* MEDIA QUERIES */
 
