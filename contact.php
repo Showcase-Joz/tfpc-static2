@@ -77,7 +77,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
           "addressRegion": "",
           "postalCode": "SK3 0AL"
         },
-        "image": "http://thefuneralplanningcompany.co.uk/img/logo.png",
+        "image": "https://thefuneralplanningcompany.co.uk/img/logo.png",
         "email": "info@thefuneralplanningcompany.co.uk",
         "telePhone": "0800 0987 931",
         "url": "https://thefuneralplanningcompany.co.uk",
@@ -94,7 +94,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://http://thefuneralplanningcompany.co.uk/index.html",
+        "url": "https://thefuneralplanningcompany.co.uk/index.html",
         "name": "The funeral Planning Company - The best prepaid funeral plans",
         "description": "The Funeral Planning Company works with you. To help the occasion fit you; the person. Ensuring your funeral celebrates the memorable times you’ve had in life.",
         "keywords": "senior citizen,funeral planning,funeral plans,insurance company,insurance broker,death preparation,last will and testament, will writers, funeral planners",
@@ -110,8 +110,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
           "name": "The Funeral Planning Company",
           "legalName": "Mark White Enterprises",
           "alternateName": "TFPC",
-          "url": "http://thefuneralplanningcompany.com",
-          "logo": "http://thefuneralplanningcompany.co.uk/img/logo.png",
+          "url": "https://thefuneralplanningcompany.co.uk",
+          "logo": "https://thefuneralplanningcompany.co.uk/img/logo.png",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "15 Kingston Mill",
