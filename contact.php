@@ -12,11 +12,16 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 	$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 	
 	
-	$message .= '<p><strong>'.strip_tags($_POST['first_name']).' '.strip_tags($_POST['last_name']).' made an enquiry the contact number is'.strip_tags($_POST['phone']).'/strong></p>';
+	$message .= '<p><strong>'.strip_tags($_POST['first_name']).' '.strip_tags($_POST['last_name']).' made an enquiry the contact number is '.strip_tags($_POST['phone']).'</strong></p>';
 	$message .= '<p><strong>'.strip_tags($_POST['comment']).'</strong></p>';
 	
 	
 	mail($to, $subject, $message, $headers);
+	$_POST["email"]="";
+	$_POST["first_name"]="";
+	$_POST["last_name"]="";
+	$_POST["phone"]="";
+	$_POST["comment"]="";
 	
 }
 ?>
@@ -249,7 +254,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                           <label class="control-label">First Name</label>
                           <div class="inputGroupContainer">
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="first_name" placeholder="First Name" type="text">
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="first_name" placeholder="First Name" type="text" value="<?php echo $_POST["first_name"] ?>">
                             </div>
                           </div>
                         </div>
@@ -260,7 +265,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                           <label class="control-label">Last Name</label>
                           <div class="inputGroupContainer">
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="last_name" placeholder="Last Name" type="text">
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="last_name" placeholder="Last Name" type="text" value="<?php echo $_POST["last_name"] ?>">
                             </div>
                           </div>
                         </div>
@@ -270,7 +275,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                       <label class="control-label" for="inputemail">E-Mail</label>
                       <div class="inputGroupContainer">
                         <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-at"></i></span> <input aria-describedby="inputemailStatus" class="form-control" id="inputemail" name="email" placeholder="j.smith@hotmail.com" type="text">
+                          <span class="input-group-addon"><i class="fa fa-at"></i></span> <input aria-describedby="inputemailStatus" class="form-control" id="inputemail" name="email" placeholder="j.smith@hotmail.com" type="text" value="<?php echo $_POST["email"]?>">
                         </div>
                       </div><span aria-hidden="true" class="fa fa-ok form-control-feedback"></span> <span class="sr-only" id="inputemailStatus">(success)</span>
                     </div><!-- Text input-->
@@ -278,7 +283,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                       <label class="control-label">Phone No.</label>
                       <div class="inputGroupContainer">
                         <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-phone"></i></span> <input class="form-control" name="phone" placeholder="0161 282 1930" type="text">
+                          <span class="input-group-addon"><i class="fa fa-phone"></i></span> <input class="form-control" name="phone" placeholder="0161 282 1930" type="text" value="<?php echo $_POST["phone"]?>">
                         </div>
                       </div>
                     </div><!-- Text area -->
@@ -287,7 +292,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
                       <div class="inputGroupContainer">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-terminal"></i></span> 
-                          <textarea class="form-control" name="comment" placeholder="Write your message here" rows="6"></textarea>
+                          <textarea class="form-control" name="comment" placeholder="Write your message here" rows="6" value="<?php echo $_POST["comment"]?>"></textarea>
                         </div>
                       </div>
                     </div>
