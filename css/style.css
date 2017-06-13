@@ -846,10 +846,21 @@ q:after {
 }
 /* LINKS */
 
-h2.pop-action a {
-  margin-top: -10px;
-}
+#about-funeral-plans section row < .pop-action {
 
+}
+#about-funeral-plans section h2.pop-action {
+    margin-bottom: 0;
+    min-height: 140px;
+    font-size: small;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+#about-funeral-plans section h2.pop-action a {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+}
 .tel-no,
 .tel-no:focus,
 .tel-no:hover,
@@ -1263,6 +1274,19 @@ section .interest-box .interest-content .interest-content-inner p {
   font-size: initial;
   line-height: initial;
 }
+#about-funeral-plans section row < .pop-action {
+
+}
+#about-funeral-plans section h2.pop-action {
+  font-size: medium;
+  min-height: initial;
+}
+#about-funeral-plans section h2.pop-action a {
+    width: initial;
+    float: right;
+    margin-top: -15px;
+}
+
 footer .footer-widget {
     line-height: 2em;
     font-size: 12px;
@@ -1357,6 +1381,13 @@ section .interest-box .interest-content {
     width: 100%;
     left: 100%;
     border-top-left-radius: 100px;
+}
+#about-funeral-plans section h2.pop-action {
+  font-size: x-large;
+  margin: auto -80px;
+}
+#about-funeral-plans section h2.pop-action a {
+    margin-top: -10px;
 }
 footer .footer-widget {
   line-height: 2em;
