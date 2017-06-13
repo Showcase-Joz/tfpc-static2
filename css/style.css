@@ -583,6 +583,11 @@ section#partners .partner-slider-controls .btn {
 	padding: 0px 6px;
 	font-size: 11px;
 }
+
+/*section .page-header-img > [class*='col-xs-12'] {
+  padding-left: 0px;
+  padding-right: 0px;
+}*/
 /* ++++++++++++++++++++++++ Sliders
 
 --- Flexslider --- */
@@ -1428,6 +1433,6 @@ footer .footer-widget button {
 }
 .pop-statement,
 .pop-action{
-  margin: auto -80px;
+  margin: auto -6%;
 }
 }

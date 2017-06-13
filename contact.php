@@ -207,20 +207,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     <!-- END Header section -->
 
     <section>
-      <!-- Flexslider -->
-      <div id="main-slider" class="flexslider">
-        <ul class="slides">
-        <li>
-          <img src="img/slides/2.jpg" alt="header image 1" />
-          <div class="flex-caption">
-            <h3>Let your family celebrate your life</h3>
-            <p>Laborum mollit sit dolor ullamco.</p>
-          </div>
-        </li>
-        </ul>
-      </div>
-
-      <!-- END Flexslider -->
+      <img class="page-header-img" src="img/slides/time-to-contact-the-funeral-planning-company.jpg" alt="time to contact the funeral planning company">
     </section>
 
     <section class="jumbobox">
