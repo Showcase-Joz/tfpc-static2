@@ -21,8 +21,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 	$_POST["first_name"]="";
 	$_POST["last_name"]="";
 	$_POST["phone"]="";
-	$_POST["comment"]="";
-	
+	$_POST["comment"]="";	
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +32,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>The funeral Planning Company - The best prepaid funeral plans</title>
-    <meta name="description" content="The Funeral Planning Company works with you. To help the occasion fit you; the person. Ensuring your funeral celebrates the memorable times you’ve had in life.">
+    <meta name="description" content="The Funeral Planning Company works with you. To help the occasion fit you; the person. Ensuring your funeral celebrates the memorable times youï¿½ve had in life.">
     <meta name="author" content="The Funeral Planning Company">
     <link rel="icon" href="favicon.ico" />
     
@@ -96,7 +95,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         "@type": "WebSite",
         "url": "https://thefuneralplanningcompany.co.uk/index.html",
         "name": "The funeral Planning Company - The best prepaid funeral plans",
-        "description": "The Funeral Planning Company works with you. To help the occasion fit you; the person. Ensuring your funeral celebrates the memorable times you’ve had in life.",
+        "description": "The Funeral Planning Company works with you. To help the occasion fit you; the person. Ensuring your funeral celebrates the memorable times youï¿½ve had in life.",
         "keywords": "senior citizen,funeral planning,funeral plans,insurance company,insurance broker,death preparation,last will and testament, will writers, funeral planners",
         "Audience": {
           "@context": "https://schema.org",
@@ -243,7 +242,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
           <div class="row">
             <div class="col-xs-12 col-md-5">
               <h2>Send us a message <i class="fa fa-commenting-o fa-lg pull-right"></i></h2>
-              <p>Having a send off that suits you is everyone's last wish. Make the choices today! So your family don’t have to worry through their time of grieving.</p>
+              <p>Having a send off that suits you is everyone's last wish. Make the choices today! So your family donï¿½t have to worry through their time of grieving.</p>
               <div class="col-xs-12">
                 <form role="form" class="form-horizontal" id="contact_form" method="post" name="contact_form">
                   <fieldset>
@@ -325,7 +324,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
             </div>
             <div class="col-xs-12 col-md-6 col-md-offset-1 google-map">
               <h2>We are here <i class="fa fa-map-signs fa-lg pull-right"></i></h2>
-              <p>Having a send off that suits you is everyone's last wish. Make the choices today! So your family don’t have to worry through their time of grieving.</p>
+              <p>Having a send off that suits you is everyone's last wish. Make the choices today! So your family donï¿½t have to worry through their time of grieving.</p>
               <div class="map">
                 <iframe allowfullscreen height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152213.1108149693!2d-2.1689027469937985!3d53.4089267091372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb370ca6f3863%3A0xc88a80d07b2baad4!2sThe+Funeral+Planning+Company!5e0!3m2!1sen!2suk!4v1496942608584"></iframe>
               </div>
@@ -442,6 +441,24 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     </div>
     <a href="#" class="scrollBtn bkcolor-secondary-1-3"><i class="fa fa-angle-up fa-2x active" aria-hidden="true"></i></a>
 
+    <!-- modal boxes -->
+    <!-- Modal -->
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Message Received</h4>
+          </div>
+          <div class="modal-body">
+            Thank you for sending us a message. We have now received it and are directing it to the correct department.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-purple" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -454,5 +471,15 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     <script src="js/owl-carousel/owl.carousel.js" type="text/javascript"></script>
     <script src="js/contact-val.js?v=1" type="text/javascript"></script>
     <script src="js/main.js?v=1" type="text/javascript"></script>
-  </body>
+  	<?php
+			if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
+			{		
+				echo "<script type='text/javascript'>
+			$(document).ready(function(){
+			$('#success').modal('show');
+			});
+			</script>";
+						}
+		?>
+	</body>
 </html>

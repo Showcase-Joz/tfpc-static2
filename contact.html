@@ -50,7 +50,7 @@
           "addressRegion": "",
           "postalCode": "SK3 0AL"
         },
-        "image": "http://thefuneralplanningcompany.co.uk/img/logo.png",
+        "image": "https://thefuneralplanningcompany.co.uk/img/logo.png",
         "email": "info@thefuneralplanningcompany.co.uk",
         "telePhone": "0800 0987 931",
         "url": "https://thefuneralplanningcompany.co.uk",
@@ -67,7 +67,7 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://http://thefuneralplanningcompany.co.uk/index.html",
+        "url": "https://thefuneralplanningcompany.co.uk/index.html",
         "name": "The funeral Planning Company - The best prepaid funeral plans",
         "description": "The Funeral Planning Company works with you. To help the occasion fit you; the person. Ensuring your funeral celebrates the memorable times you’ve had in life.",
         "keywords": "senior citizen,funeral planning,funeral plans,insurance company,insurance broker,death preparation,last will and testament, will writers, funeral planners",
@@ -83,8 +83,8 @@
           "name": "The Funeral Planning Company",
           "legalName": "Mark White Enterprises",
           "alternateName": "TFPC",
-          "url": "http://thefuneralplanningcompany.com",
-          "logo": "http://thefuneralplanningcompany.co.uk/img/logo.png",
+          "url": "https://thefuneralplanningcompany.co.uk",
+          "logo": "https://thefuneralplanningcompany.co.uk/img/logo.png",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "15 Kingston Mill",
@@ -181,20 +181,7 @@
     <!-- END Header section -->
 
     <section>
-      <!-- Flexslider -->
-      <div id="main-slider" class="flexslider">
-        <ul class="slides">
-        <li>
-          <img src="img/slides/2.jpg" alt="header image 1" />
-          <div class="flex-caption">
-            <h3>Let your family celebrate your life</h3>
-            <p>Laborum mollit sit dolor ullamco.</p>
-          </div>
-        </li>
-        </ul>
-      </div>
-
-      <!-- END Flexslider -->
+      <img class="page-header-img" src="img/slides/time-to-contact-the-funeral-planning-company.jpg" alt="time to contact the funeral planning company">
     </section>
 
     <section class="jumbobox">
@@ -218,7 +205,7 @@
               <h2>Send us a message <i class="fa fa-commenting-o fa-lg pull-right"></i></h2>
               <p>Having a send off that suits you is everyone's last wish. Make the choices today! So your family don’t have to worry through their time of grieving.</p>
               <div class="col-xs-12">
-                <form action="TEST" class="form-horizontal" id="contact_form" method="post" name="contact_form">
+                <form role="form" class="form-horizontal" id="contact_form" method="post" name="contact_form">
                   <fieldset>
                     <div class="row">
                       <div class="col-xs-5">
@@ -227,7 +214,7 @@
                           <label class="control-label">First Name</label>
                           <div class="inputGroupContainer">
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="first_name" placeholder="First Name" type="text">
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="first_name" placeholder="First Name" type="text" value="<?php echo $_POST["first_name"] ?>">
                             </div>
                           </div>
                         </div>
@@ -238,7 +225,7 @@
                           <label class="control-label">Last Name</label>
                           <div class="inputGroupContainer">
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="last_name" placeholder="Last Name" type="text">
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="last_name" placeholder="Last Name" type="text" value="<?php echo $_POST["last_name"] ?>">
                             </div>
                           </div>
                         </div>
@@ -248,7 +235,7 @@
                       <label class="control-label" for="inputemail">E-Mail</label>
                       <div class="inputGroupContainer">
                         <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-at"></i></span> <input aria-describedby="inputemailStatus" class="form-control" id="inputemail" name="email" placeholder="j.smith@hotmail.com" type="text">
+                          <span class="input-group-addon"><i class="fa fa-at"></i></span> <input aria-describedby="inputemailStatus" class="form-control" id="inputemail" name="email" placeholder="j.smith@hotmail.com" type="text" value="<?php echo $_POST["email"]?>">
                         </div>
                       </div><span aria-hidden="true" class="fa fa-ok form-control-feedback"></span> <span class="sr-only" id="inputemailStatus">(success)</span>
                     </div><!-- Text input-->
@@ -256,7 +243,7 @@
                       <label class="control-label">Phone No.</label>
                       <div class="inputGroupContainer">
                         <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-phone"></i></span> <input class="form-control" name="phone" placeholder="0161 282 1930" type="text">
+                          <span class="input-group-addon"><i class="fa fa-phone"></i></span> <input class="form-control" name="phone" placeholder="0161 282 1930" type="text" value="<?php echo $_POST["phone"]?>">
                         </div>
                       </div>
                     </div><!-- Text area -->
@@ -265,7 +252,7 @@
                       <div class="inputGroupContainer">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-terminal"></i></span> 
-                          <textarea class="form-control" name="comment" placeholder="Write your message here" rows="6"></textarea>
+                          <textarea class="form-control" name="comment" placeholder="Write your message here" rows="6" value="<?php echo $_POST["comment"]?>"></textarea>
                         </div>
                       </div>
                     </div>
@@ -415,6 +402,24 @@
     </div>
     <a href="#" class="scrollBtn bkcolor-secondary-1-3"><i class="fa fa-angle-up fa-2x active" aria-hidden="true"></i></a>
 
+    <!-- modal boxes -->
+    <!-- Modal -->
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Message Received</h4>
+          </div>
+          <div class="modal-body">
+            Thank you for sending us a message. We have now received it and are directing it to the correct department.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-purple" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
