@@ -207,7 +207,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     <!-- END Header section -->
 
     <section>
-      <img class="page-header-img" src="img/slides/time-to-contact-the-funeral-planning-company.jpg" alt="time to contact the funeral planning company">
+      <img class="page-header-img img-responsive" src="img/slides/time-to-contact-the-funeral-planning-company.jpg" alt="time to contact the funeral planning company">
     </section>
 
     <section class="jumbobox">
@@ -320,13 +320,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         </div><!-- END main site areas -->
       </section>
 
-    <section class="jumbobox">
-      <div class="container">
-        
+    <section class="container-fluid">
         <div class="row">
           <h2 class="pop-statement bkcolor-complement-0 ">Looking forward to hearing from you soon<i class="fa fa-comments-o fa-lg"></i></h2>
         </div>
-      </div>
     </section>
 
     <footer>
