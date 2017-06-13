@@ -781,7 +781,8 @@ footer .copyright:hover {
 /* ADDITIONAL TYPOGRAPHY */
 
 
-.pop-statement {
+.pop-statement,
+.pop-action {
   text-transform: uppercase;
   letter-spacing: 3px;
   word-spacing: 6px;
@@ -844,6 +845,10 @@ q:after {
   text-align: center;
 }
 /* LINKS */
+
+h2.pop-action a {
+  margin-top: -10px;
+}
 
 .tel-no,
 .tel-no:focus,
@@ -1390,7 +1395,8 @@ footer .footer-widget button {
   -moz-column-fill: balance;
        column-fill: balance;
 }
-.pop-statement {
+.pop-statement,
+.pop-action{
   margin: auto -80px;
 }
 }
