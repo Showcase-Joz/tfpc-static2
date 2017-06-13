@@ -207,7 +207,16 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     <!-- END Header section -->
 
     <section>
-      <img class="page-header-img img-responsive" src="img/slides/time-to-contact-the-funeral-planning-company.jpg" alt="time to contact the funeral planning company">
+    <div id="main-slider" class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="img/slides/time-to-contact-the-funeral-planning-company.jpg" alt="time to contact the funeral planning company" />
+            <div class="flex-caption">
+              <h2 class="lead-big ">Get in touch with us today for complete peace of mind.</h2>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="jumbobox">
@@ -215,8 +224,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <h1>Can you say you have take pride in your funeral plan?</h1>
-              <p class="lead-big">Plan and pay for your funeral in advance with our prepaid funeral plans.</p>
+              <h1>The Funeral Planning Company</h1>
+              <p class="lead-big">We're <strong>HELPING</strong> people just like you, every day.</p>
             </div>
           </div>
         </div>

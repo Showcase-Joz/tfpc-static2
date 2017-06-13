@@ -584,10 +584,6 @@ section#partners .partner-slider-controls .btn {
 	font-size: 11px;
 }
 
-/*section .page-header-img > [class*='col-xs-12'] {
-  padding-left: 0px;
-  padding-right: 0px;
-}*/
 /* ++++++++++++++++++++++++ Sliders
 
 --- Flexslider --- */
@@ -625,6 +621,20 @@ right:0px;
 	right: 0px;
 	display: inline-block;
 	margin-left: 15px;
+}
+.flex-caption h2 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 28px;
+    background-color: rgba(0,0,0,.5);
+    padding: 20px;
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+    -webkit-text-stroke: 0;
+    -webkit-text-fill-color: #fff;
+    color: fff;
+    text-transform: inherit;
 }
 .flex-caption h3 {
 	color: rgba(92, 67,141,0.7);
@@ -794,7 +804,7 @@ footer .copyright:hover {
   padding: 40px;
   color: #fff;
   text-align: center;
-      margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 .lead-big {
   font-size: 24px;
@@ -802,7 +812,7 @@ footer .copyright:hover {
   line-height: 1.6em;
 }
 .lead {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.6em;
 }
@@ -1251,6 +1261,10 @@ header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links li:h
 header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links li:focus a i {
   color: #ffe985;  
 }
+.flex-caption h2 {
+  border-top-right-radius: 10px;
+}
+
 
 }
 
