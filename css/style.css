@@ -795,7 +795,9 @@ footer .copyright:hover {
 
 /* ADDITIONAL TYPOGRAPHY */
 
-
+.justify {
+  text-align: justify;
+}
 .pop-statement,
 .pop-action {
   text-transform: uppercase;
@@ -1364,6 +1366,24 @@ footer .copyright {
 	text-align: right;
 }
 
+/* ADDITIONAL TYPOGRAPHY */
+
+
+section .text-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    column-rule-color: #ccc;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    text-align: justify;
+    -webkit-column-fill: balance;
+    -moz-column-fill: balance;
+    column-fill: balance;
+}
 
 /* MISC */
 
@@ -1428,21 +1448,6 @@ footer .footer-widget button {
   width: 50%;
 }
 
-/* ADDITIONAL TYPOGRAPHY */
 
-.jumbobox p.text-columns {
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count:    3; /* Firefox */
-  column-count:         3;
-    -webkit-column-gap:   40px; /* Chrome, Safari, Opera */ 
-  -moz-column-gap:      40px; /* Firefox */
-  column-gap:           40px;
-  column-rule-color: #ccc; /* Optional */
-  column-rule-style:solid; /* Optional */
-  column-rule-width: 2px; /* Optional */
-  text-align: justify; /* Optional */
-  -moz-column-fill: balance;
-       column-fill: balance;
-}
 
 }
