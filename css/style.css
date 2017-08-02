@@ -6,10 +6,6 @@
 
 -------------------------------------------------------*/
 
-@import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
-@import url('font-awesome.css');  
-@import url('animate.css');
-
 
 /*
     Table of Content
@@ -65,7 +61,7 @@ h1,h2, h3, h4, h5, h6 {
 	font-family:'Open Sans', Arial, sans-serif;
 	font-weight: 600;
 	line-height:1.1em;
-	color: #91be4f;
+	color: #95c11f;
 	margin-bottom: 20px;
 }
  h2 {
@@ -122,13 +118,13 @@ h1,h2, h3, h4, h5, h6 {
 .color-secondary-1-1 { color: #EAF7D6 }
 .color-secondary-1-2 { color: #DBF2BA }
 .color-secondary-1-3 { color: #B0D975 }
-.color-secondary-1-4 { color: #91BE4F }
+.color-secondary-1-4 { color: #95c11f }
 
 .bkcolor-secondary-1-0 { background-color: #BDEB7B }	/* Main Secondary color (1) */
 .bkcolor-secondary-1-1 { background-color: #EAF7D6 }
 .bkcolor-secondary-1-2 { background-color: #DBF2BA }
 .bkcolor-secondary-1-3 { background-color: #B0D975 }
-.bkcolor-secondary-1-4 { background-color: #91BE4F }
+.bkcolor-secondary-1-4 { background-color: #95c11f }
 
 .color-secondary-2-0 { color: #FB8389 }	/* Main Secondary color (2) */
 .color-secondary-2-1 { color: #FDDBDD }
@@ -209,7 +205,7 @@ h1,h2, h3, h4, h5, h6 {
 	border-top: 1px solid #656565;
 }
 .alert-green {
-    color: #91be4f;
+    color: #95c11f;
     background-color: #eff7d6;
     border-color: #dbf2ba;
 }
@@ -596,12 +592,13 @@ section#partners .partner-slider-controls .btn {
 	 position: absolute; 
 }
 .flex-direction-nav a{
-display:none;
+  display:none;
 }
 .flexslider {
 	padding:0;
 	position: relative;
 	zoom:1;
+  border: none;
 	background: #ffe985;
 }
 .flex-direction-nav .flex-prev{
@@ -649,7 +646,7 @@ right:0px;
 .flex-caption p {
 	margin: 0px 0 5px;
   font-size: 24px;
-  color: #4a4a4a;
+  color: #333333;
   display: block;
   line-height: 1em;
 
@@ -885,7 +882,7 @@ q:after {
 .email:focus,
 .email:hover
  {
-  color: #91be4f;
+  color: #95c11f;
 	text-decoration: none;
 	text-transform: uppercase;
   transition: 300ms all ease-in-out;
@@ -1012,7 +1009,7 @@ fieldset[disabled] .btn-yellow.active {
 .btn-green.active, 
 .open .dropdown-toggle.btn-green { 
   color: #959595; 
-  background-color: #91be4f; 
+  background-color: #95c11f; 
   border-color: #BDEB7B; 
 } 
 .btn-green:active, 
@@ -1141,7 +1138,7 @@ fieldset[disabled] .btn-purple.active {
   color: #cb545a;
 }
 .has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
-  color: #91be4f;
+  color: #95c11f;
 }
 .has-error .input-group-addon {
     color: #cb545a;
@@ -1149,9 +1146,9 @@ fieldset[disabled] .btn-purple.active {
     border-color: #cb545a;
 }
 .has-success .input-group-addon {
-    color: #91be4f;
+    color: #95c11f;
     background-color: #DBF2BA;
-    border-color: #91be4f;
+    border-color: #95c11f;
 }
 #contact-us .form-group .help-block {
   margin-top: 0px;
