@@ -5,33 +5,7 @@ jQuery(document).ready(function($) {
 
 	    // set copyright year date
 	    var currentYear=(new Date).getFullYear();
-	    {$(".year").text(currentYear);}
-
-	    // disable button if bigger than
-	   
-	
-		//add some elements with animate effect
-
-		$(".big-cta").hover(
-			function () {
-			$('.cta a').addClass("animated shake");
-			},
-			function () {
-			$('.cta a').removeClass("animated shake");
-			}
-		);
-		$(".box").hover(
-			function () {
-			$(this).find('.icon').addClass("animated fadeInDown");
-			//$(this).find('p').addClass("animated fadeInUp");
-			},
-			function () {
-			$(this).find('.icon').removeClass("animated fadeInDown");
-			//$(this).find('p').removeClass("animated fadeInUp");
-			}
-		);
-		
-		/* truncate content overview */
+  		{$('.year').text(currentYear);}
 
 		  /*Clients Slider*/  
 		  if ($('#partner-slider').length){
@@ -54,30 +28,17 @@ jQuery(document).ready(function($) {
 			  });
 		  }
 		 
-		  // Custom Navigation Events
+		  // OWL Custom Navigation Events
 		  $(".partner-slider .next").click(function(){
 			owlPartner.trigger('owl.next');
-		  })
+		  });
 		  $(".partner-slider .prev").click(function(){
 			owlPartner.trigger('owl.prev');
-		  })
+		  });
 		
-		$('.accordion').on('show', function (e) {
-		
-			$(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
-			$(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-plus');
-			$(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-minus');
-		});
-		
-		$('.accordion').on('hide', function (e) {
-			$(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
-			$(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-minus');
-			$(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-plus');
-		});	
-
 		
 		// tooltip
-		$('.social-network li a, .options_box .color a').tooltip();
+		$('.social-links li a, .legal li a, .options_box .color a').tooltip();
 
 		// fancybox
 		// $(".fancybox").fancybox({				
@@ -92,6 +53,7 @@ jQuery(document).ready(function($) {
 		// 		}
 		// 	});
 
+
 		
 		//scroll to top
 		$(window).scroll(function(){
@@ -105,6 +67,16 @@ jQuery(document).ready(function($) {
 			$("html, body").animate({ scrollTop: 0 }, 1000);
 				return false;
 		});
+
+		// init WOW
+		var wow = new WOW(
+		  {
+		    mobile:       false,       // trigger animations on mobile devices (default is true)
+		    live:         true,       // act on asynchronously loaded content (default is true)
+		    }
+		);
+		wow.init();
+
     $('#post-slider').flexslider({
         // Primary Controls
         controlNav          : false,              //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
