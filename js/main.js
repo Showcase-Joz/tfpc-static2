@@ -109,18 +109,15 @@ $(window).load(function() {
 		  });
 		  
 		  
-		  
   		// tooltip
- 	  	$('.social-links li a, .legal li a, .options_box .color a').tooltip();
-
-
+ 	  	$('[data-toggle="tooltip"]').tooltip();
     
-     // set copyright year date
-	   var currentYear=(new Date).getFullYear();
-     {$('.year').text(currentYear);}
-    
-    
-    //scroll to top
+         // set copyright year date
+    	var currentYear=(new Date).getFullYear();
+         {$('.year').text(currentYear);}
+        
+        
+        //scroll to top
 		$(window).scroll(function(){
 			if ($(this).scrollTop() > 100) {
 				$('.scrollBtn').fadeIn();
@@ -152,16 +149,16 @@ jQuery(document).ready(function($) {
   		wow.init();
 
 	    
-
-		  
-		 
-		  
-		
-		
-
-		
-		
+    //hide/show accessibiliy content
+    $('#show-accessability').click(function(){
+        $('.accessability-bound').slideToggle('500');
+        $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
+    });
 
 
+    // on event onclick
+    noevent = function(e) {
+            e.preventDefault();
+        };
 
 });

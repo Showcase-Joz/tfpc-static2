@@ -176,6 +176,7 @@
                       </ul>
                   </li>
                   <li><a href="contact.php">Contact</a></li>
+                  <li><button onclick="noevent(event)" class="btn btn-link visible-md-inline visible-lg-inline wow bounce delayed" data-wow-delay="4s" data-placement="top" data-wow-duration="750ms" data-wow-iteration="1" title="" data-original-title="Accessibility Options" id="show-accessability"><i class="fa fa-universal-access fa-2x fa-lg wow pulse delayed" data-wow-duration="2s" data-wow-delay="2s" data-placement="top" data-wow-iteration="infinite" aria-hidden="true"></i></button></li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div>
@@ -189,8 +190,37 @@
       <div id="main-slider" class="flexslider">
         <ul class="slides">
           <li>
-            <div class="float-box pull-right wow fadeInRight" data-wow-delay="1.5s">test box
-              <a href="#">testing</a>
+            <div class="accessability-bound">
+              <div class="accessability-box">
+              <h4 class="margin-bottom-20">Accessibility options</h4>
+              <div class="row margin-bottom-20 accessibility-panel">
+                <div class="col-md-3">
+                  <i class="fa fa-text-height fa-fw fa-3x" aria-hidden="true" aria-label="Make text bigger"></i>
+                  <span>Bigger Text Size</span>
+                </div>
+                <div class="col-md-3">
+                  <i class="fa fa-low-vision fa-fw fa-3x" aria-hidden="true" aria-label="High contrast colour scheme"></i>
+                  <span>High Contrast</span>
+                </div>
+                <div class="col-md-3">
+                  <a href="#content">
+                    <i class="fa fa-level-down fa-fw fa-3x" aria-hidden="true" aria-label="Skip to main content"></i>
+                    <span>Go to Content</span>
+                  </a>
+                </div>
+                <div class="col-md-3">
+                  <a href="tel:+448000987931">
+                    <i class="fa fa-phone-square fa-fw fa-3x" aria-hidden="true" aria-label="Calls main Switchboard for assistance"></i>
+                    <span>Switchboard</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row accessibility-info">
+              <div class="col-md-12">
+                <p>Use our accessibility options to help improve your user experience.</p>
+              </div>
+            </div>
             </div>
             <img src="img/slides/what-is-a-funeral-planing-company-plan.jpg" alt="what is a funeral planning company funeral plan" />
             <div class="flex-caption">
@@ -204,8 +234,8 @@
     </section>
     <!-- mini options panel -->
     <section class="container-fluid margin-bottom-20"> 
-      <div class="row">
-        <h2 class="pop-statement bkcolor-primary-0">You simply plan and pay for your funeral in advance.</h2>
+      <div id="content" class="row">
+        <h2 class="pop-statement bkcolor-secondary-1-3">You simply plan and pay for your funeral in advance.</h2>
       </div>
     </section>
     <!-- END mini options panel -->
