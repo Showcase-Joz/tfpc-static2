@@ -1,82 +1,17 @@
-/*global jQuery:false */
-jQuery(document).ready(function($) {
-"use strict";
-
-
-	    // set copyright year date
-	    var currentYear=(new Date).getFullYear();
-  		{$('.year').text(currentYear);}
-
-		  /*Clients Slider*/  
-		  if ($('#partner-slider').length){
-			  var owlPartner = $("#partner-slider"); 
-			  owlPartner.owlCarousel({
-				  autoPlay: 5000,
-				  loop:true,
-				  autoWidth:true,
-				  items:4,
-				  stagePadding: 50,
-			  	0:{
-		            items:1
-		        },
-		        600:{
-		            items:2
-		        },
-		        768:{
-		            items:3
-		        }
-			  });
-		  }
-		 
-		  // OWL Custom Navigation Events
-		  $(".partner-slider .next").click(function(){
-			owlPartner.trigger('owl.next');
-		  });
-		  $(".partner-slider .prev").click(function(){
-			owlPartner.trigger('owl.prev');
-		  });
-		
-		
-		// tooltip
-		$('.social-links li a, .legal li a, .options_box .color a').tooltip();
-
-		// fancybox
-		// $(".fancybox").fancybox({				
-		// 		padding : 0,
-		// 		autoResize: true,
-		// 		beforeShow: function () {
-		// 			this.title = $(this.element).attr('title');
-		// 			this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
-		// 		},
-		// 		helpers : {
-		// 			title : { type: 'inside' },
-		// 		}
-		// 	});
-
-
-		
-		//scroll to top
-		$(window).scroll(function(){
-			if ($(this).scrollTop() > 100) {
-				$('.scrollBtn').fadeIn();
-				} else {
-				$('.scrollBtn').fadeOut();
-			}
-		});
-		$('.scrollBtn').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 1000);
-				return false;
-		});
-
-		// init WOW
-		var wow = new WOW(
-		  {
-		    mobile:       false,       // trigger animations on mobile devices (default is true)
-		    live:         true,       // act on asynchronously loaded content (default is true)
-		    }
-		);
-		wow.init();
-
+$(window).load(function() {
+    $('#status').fadeOut();
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350).css({
+        'overflow': 'visible'
+    });
+    
+    
+    
+    
+    
+    
+    
+    // Flexslider settings
     $('#post-slider').flexslider({
         // Primary Controls
         controlNav          : false,              //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
@@ -142,5 +77,91 @@ jQuery(document).ready(function($) {
         sync                : "",                //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
         asNavFor            : "",                //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
     });
+    
+    
+    /*Clients Slider*/  
+		  if ($('#partner-slider').length){
+			  var owlPartner = $("#partner-slider"); 
+			  owlPartner.owlCarousel({
+				  autoPlay: 5000,
+				  loop:true,
+				  autoWidth:true,
+				  items:4,
+				  stagePadding: 50,
+			  	0:{
+		            items:1
+		        },
+		        600:{
+		            items:2
+		        },
+		        768:{
+		            items:3
+		        }
+			  });
+		  }
+		  
+		  // OWL Custom Navigation Events
+		  $(".partner-slider .next").click(function(){
+			owlPartner.trigger('owl.next');
+		  });
+		  $(".partner-slider .prev").click(function(){
+			owlPartner.trigger('owl.prev');
+		  });
+		  
+		  
+		  
+  		// tooltip
+ 	  	$('.social-links li a, .legal li a, .options_box .color a').tooltip();
+
+
+    
+     // set copyright year date
+	   var currentYear=(new Date).getFullYear();
+     {$('.year').text(currentYear);}
+    
+    
+    //scroll to top
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 100) {
+				$('.scrollBtn').fadeIn();
+				} else {
+				$('.scrollBtn').fadeOut();
+			}
+		});
+		$('.scrollBtn').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 1000);
+				return false;
+		});
+    
+}); 
+
+
+
+
+/*global jQuery:false */
+jQuery(document).ready(function($) {
+"use strict";
+
+  		// init WOW
+  		var wow = new WOW(
+  		  {
+  		    mobile:       false,       // trigger animations on mobile devices (default is true)
+  		    live:         true,       // act on asynchronously loaded content (default is true)
+  		    }
+  		);
+  		wow.init();
+
+	    
+
+		  
+		 
+		  
+		
+		
+
+		
+		
+
+
 
 });

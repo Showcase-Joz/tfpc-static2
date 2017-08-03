@@ -113,7 +113,7 @@ var myChart = new Chart(ctx, {
             text: 'Annual rise in Funeral Costs'
         },
         animation: {
-            duration: 10000,
+            duration: 7000,
             easing: 'easeOutExpo'
         }
     }

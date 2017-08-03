@@ -618,6 +618,7 @@ section#partners .partner-slider-controls .btn {
 	zoom:1;
   border: none;
 	background: #ffe985;
+  margin-bottom: -20px;
 }
 .flex-direction-nav .flex-prev{
 left:0px; 
@@ -1231,6 +1232,23 @@ footer .footer-widget button {
   width: 50%;
 }
 /* MISC */
+
+.float-box {
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    margin: 10px;
+    min-height: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    display: block;
+    box-shadow: 1px -1px 2px #656565;
+    box-sizing: border-box;
+    font-size: 40px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 5px;
+}
 
 .text-light, .text-hover-light:hover{
   color: #ffffff;
