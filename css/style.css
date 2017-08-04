@@ -470,7 +470,7 @@ header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links li a
 header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links {
   display: none;
 }
-.accessability-box {
+.accessability-bound {
   display: none;
 }
 /* ++++++++++++ END Nav  */
@@ -820,7 +820,7 @@ footer .copyright:hover {
 .justify {
   text-align: justify;
 }
-.pop-statement,
+.top-controls,.pop-statement,
 .pop-action {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -1333,9 +1333,7 @@ header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links li:f
 	text-transform: uppercase;
 }
 
-.accessability-box {
-  display: block;
-}
+
 .accessability-bound {
   background-color: rgba(0,0,0,0.2);
   height: 160px;
@@ -1398,6 +1396,21 @@ header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links li:f
   font-size: medium;
   text-align: right;
   padding-top: 5px;
+}
+
+section.top-controls {
+  height: 20vh;
+  background-color: #B1A2CD;
+}
+section.top-controls div .top-control-item {
+
+}
+section.top-controls div .top-control-item span {
+  border-top: 1px solid rgba(255,255,255,0.3);
+  margin-top: 10px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 section .interest-box:nth-child(2),
 section .interest-box:nth-child(3) {
