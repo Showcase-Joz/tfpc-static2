@@ -154,6 +154,17 @@ jQuery(document).ready(function($) {
         $('.accessability-bound').slideToggle('500');
         $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
     });
+    
+    $('a[href^="#"]').on('click',function (e) {
+         e.preventDefault();
+         var target = this.hash,
+         $target = $(target + "");
+         $('html, body').stop().animate({
+             'scrollTop': $target.offset().top + 21
+         }, 900, 'swing', function () {
+         window.location.hash = target;
+         });
+     });
 
 
     // on event onclick
