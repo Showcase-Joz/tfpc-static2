@@ -948,10 +948,17 @@ button.dotted-line:hover {
 	margin: 0 auto;
 }
 .top-control-item svg.icon {
-    height: 60px;
+    height: 70px;
     fill: #ffffff;
     stroke: #ffffff;
 
+}
+.top-control-item object {
+    height: 70px;
+    display: block;
+    margin: auto;
+    fill: #ffffff;
+    stroke: #ffffff;
 }
 .top-control-item svg {
     display: block;
