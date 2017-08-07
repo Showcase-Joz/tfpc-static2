@@ -947,7 +947,16 @@ button.dotted-line:hover {
 .img-center {
 	margin: 0 auto;
 }
+.top-control-item svg.icon {
+    height: 60px;
+    fill: #ffffff;
+    stroke: #ffffff;
 
+}
+.top-control-item svg {
+    display: block;
+    width: 100%;
+}
 
 /* BUTTONS */
 
@@ -1401,9 +1410,12 @@ header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links li:f
 section.top-controls {
   height: 20vh;
   background-color: #B1A2CD;
+  padding: 20px;
 }
 section.top-controls div .top-control-item {
-
+  text-align: centre;
+  margin: auto;
+  height: initial;
 }
 section.top-controls div .top-control-item span {
   border-top: 1px solid rgba(255,255,255,0.3);
@@ -1411,6 +1423,8 @@ section.top-controls div .top-control-item span {
   display: block;
   text-transform: uppercase;
   font-size: 10px;
+  letter-spacing: 1px;
+  word-spacing: normal;
 }
 section .interest-box:nth-child(2),
 section .interest-box:nth-child(3) {
