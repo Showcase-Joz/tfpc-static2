@@ -88,7 +88,10 @@ p strong {
     position: relative;
 }
 
-
+section#content,.row.row-inner {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
 
 
@@ -300,6 +303,8 @@ p strong {
 .corner-ribbon.green{background: #bdeb7b; color: #1f1f1f;}
 .corner-ribbon.red{background: #fb8389;}
 .corner-ribbon.purple{background: #8065b2;}
+
+
 
 /* ++++++++++++	Header  */
 
@@ -820,7 +825,7 @@ footer .copyright:hover {
 .justify {
   text-align: justify;
 }
-.top-controls,.pop-statement,
+.pop-statement,
 .pop-action {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -947,23 +952,26 @@ button.dotted-line:hover {
 .img-center {
 	margin: 0 auto;
 }
-.top-control-item svg.icon {
-    height: 70px;
-    fill: #ffffff;
-    stroke: #ffffff;
-
-}
-.top-control-item object {
-    height: 70px;
-    display: block;
-    margin: auto;
-    fill: #ffffff;
-    stroke: #ffffff;
-}
 .top-control-item svg {
     display: block;
     width: 100%;
 }
+.top-control-item svg.icon {
+    height: 50px;
+    fill: #ffffff;
+    stroke: #ffffff;
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.3));      
+    filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.3));  
+
+}
+.top-control-item:hover svg.icon {
+  fill: #ffe985;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));      
+    filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));  
+  transition: 600ms all ease-in-out;
+}
+
+
 
 /* BUTTONS */
 
@@ -1413,26 +1421,45 @@ header .navbar-default .navbar-nav > .open .dropdown-menu .nav-social-links li:f
   text-align: right;
   padding-top: 5px;
 }
-
+section#content {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.24);
+}
 section.top-controls {
-  height: 20vh;
   background-color: #B1A2CD;
   padding: 20px;
 }
-section.top-controls div .top-control-item {
-  text-align: centre;
-  margin: auto;
-  height: initial;
+section.top-controls .container {
+  padding-top: 0px;
+  margin-right: 10px;
+  padding-right: 0;
 }
-section.top-controls div .top-control-item span {
-  border-top: 1px solid rgba(255,255,255,0.3);
-  margin-top: 10px;
+section.top-controls .left-border {
+  border-left: 2px solid grey;
+}
+section.top-controls div .top-control-item {
+  padding-top: 20px;
+  text-align: center;
+}
+section.top-controls div .top-control-item a span {
+  padding-top: 10px;
+  padding-bottom: 12px;
   display: block;
   text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 1px;
-  word-spacing: normal;
+  font-size: 12px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  line-height: 1.3em;
+  color: #ffffff;
+  transition: 200ms all ease-in-out;
 }
+section.top-controls div .top-control-item a:hover {
+  text-decoration: none;
+}
+section.top-controls div .top-control-item a:hover span{
+  text-decoration: none;
+  color: #ffe985;
+}
+
 section .interest-box:nth-child(2),
 section .interest-box:nth-child(3) {
   min-height: 270px;
