@@ -167,9 +167,8 @@ jQuery(document).ready(function($) {
      });
 
 
-    // on event onclick
-    noevent = function(e) {
-            e.preventDefault();
-        };
-
 });
+    // on event onclick
+    noevent=function(e){
+      e.preventDefault();
+    };
