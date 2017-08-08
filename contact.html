@@ -28,9 +28,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
    
     <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i|Open+Sans:400,600,700" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
     <link href="css/flexslider.css" rel="stylesheet" />
-    <link href="css/font-awesome.css" rel="stylesheet" />
-    <link href="css/style.css?v=1" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -143,12 +145,12 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Brand logo</a>
+                <a class="navbar-brand" href="#"><img src="img/brand-spot.png" alt="The Funeral Planning Company website logo"></a>
               </div>
               <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav text-center">
                   <li class="except-this"><a href="index.html">Home</a></li>
-                  <li><a href="#about">What is a Funeral Plan</a></li>
+                  <li><a href="what-is-a-funeral-plan.html">What is a Funeral Plan</a></li>
                   <li><a href="#about">Funeral Plans</a></li>
                   <li class="dropdown">
                       <a href="#" data-toggle="dropdown" class="dropdown-toggle">About Us <b class="caret"></b></a>
@@ -172,6 +174,9 @@
                       </ul>
                   </li>
                   <li class="active"><a href="#">Contact</a></li>
+                  <li>
+                                <button onclick="noevent(event)" class="btn btn-link visible-md-inline visible-lg-inline wow bounce delayed" data-wow-delay="7s" data-placement="top" data-wow-duration="750ms" data-wow-iteration="1" title="" data-original-title="Accessibility Options" id="show-accessability"><i class="fa fa-universal-access fa-2x fa-lg wow pulse delayed" data-wow-duration="2s" data-wow-delay="5s" data-placement="top" data-wow-iteration="infinite" aria-hidden="true"></i></button>
+                            </li>
                 </ul>
               </div><!--/.nav-collapse -->
             </div>
@@ -180,29 +185,129 @@
     </header>
     <!-- END Header section -->
 
-    <section>
-      <img class="page-header-img" src="img/slides/time-to-contact-the-funeral-planning-company.jpg" alt="time to contact the funeral planning company">
-    </section>
+    <section class="">
+            <!-- Flexslider -->
+            <div id="main-slider" class="flexslider">
+              <div class="accessability-bound wow slideInRight" data-wow-delay="2s" data-wow-duration="1500ms">
+                  <div class="accessability-box">
+                      <h4 class="margin-bottom-20">Accessibility options</h4>
+                      <div class="row margin-bottom-20 accessibility-panel">
+                          <div class="col-md-3">
+                              <i class="fa fa-text-height fa-fw fa-3x" aria-hidden="true" aria-label="Make text bigger"></i>
+                              <span>Bigger Text</span>
+                          </div>
+                          <div class="col-md-3">
+                              <i class="fa fa-low-vision fa-fw fa-3x" aria-hidden="true" aria-label="High contrast colour scheme"></i>
+                              <span>High Contrast</span>
+                          </div>
+                          <div class="col-md-3">
+                              <a href="#content">
+          <i class="fa fa-level-down fa-fw fa-3x" aria-hidden="true" aria-label="Skip to main content"></i>
+          <span>Go to Content</span>
+        </a>
+                          </div>
+                          <div class="col-md-3">
+                              <a href="tel:+448000987931">
+          <i class="fa fa-phone-square fa-fw fa-3x" aria-hidden="true" aria-label="Calls main Switchboard for assistance"></i>
+          <span>Switchboard</span>
+        </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row accessibility-info">
+                      <div class="col-md-12">
+                          <p>Use our accessibility options to help improve your user experience.</p>
+                      </div>
+                  </div>
+                </div>
+                <ul class="slides">
+                    <li>
+                        <img src="img/slides/time-to-contact-the-funeral-planning-company.jpg" alt="contact the funeral planning company" />
+                        <div class="flex-caption">
+                            <h2 class="lead-big ">Contact us at the funeral planning company today!</h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- END Flexslider -->
+        </section>
 
-    <section class="jumbobox">
+    <!-- mini options panel -->
+        <section id="content" class="container-fluid top-controls">
+            <div class="">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">
+                        <div class="row row-inner">
+                            <div class="col-xs-3 top-control-item">
+                                <a href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#giftbox" />
+                                    </svg>
+                                    <span>Refer us for your FREE gift</span>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 top-control-item">
+                                <a href="index.html#reviews">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#reviews" />
+                                    </svg>
+                                    <span>See what people are saying about us</span>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 top-control-item">
+                                <a href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#compare" />
+                                    </svg>
+                                    <span>Compare our funeral plans</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-inner">
+                        <div id="floating" class="col-xs-12 col-md-4 left-border bkcolor-secondary-2-0 wow slideInRight">
+                            <div class="col-xs-6 top-control-item">
+                                <a href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#calendar" />
+                                    </svg>
+                                    <span>Book a call back from us</span>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 top-control-item">
+                                <button onclick="$crisp.push(['do', 'chat:open'])">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#smile-in-message" />
+                                    </svg>
+                                    <span>Let's do online messaging</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END mini options panel -->
+
+    <section class="jumbobox margin-bottom-20">
       <!-- attention grabber -->
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <h1>Can you say you have take pride in your funeral plan?</h1>
-              <p class="lead-big">Plan and pay for your funeral in advance with our prepaid funeral plans.</p>
+              <h1 class="wow slideInLeft" data-wow-delay="1500ms">Can you say you have take pride in your funeral plan?</h1>
+              <p class="lead-big wow slideInRight" data-wow-delay="1800ms">Plan and pay for your funeral in advance with our prepaid funeral plans.</p>
             </div>
           </div>
         </div>
         <!-- END attention grabber -->
     </section>
 
-    <section class="margin-bottom">
+    <section class="bkcolor-primary-0">
         <!-- main interest areas -->
         <div class="container interest-boxes">
           <div class="row">
             <div class="col-xs-12 col-md-5">
-              <h2>Send us a message <i class="fa fa-commenting-o fa-lg pull-right"></i></h2>
+              <h2 class="color-complement-0">Send us a message <i class="fa fa-commenting-o fa-lg pull-right"></i></h2>
               <p>Having a send off that suits you is everyone's last wish. Make the choices today! So your family don’t have to worry through their time of grieving.</p>
               <div class="col-xs-12">
                 <form role="form" class="form-horizontal" id="contact_form" method="post" name="contact_form">
@@ -214,7 +319,7 @@
                           <label class="control-label">First Name</label>
                           <div class="inputGroupContainer">
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="first_name" placeholder="First Name" type="text" value="<?php echo $_POST["first_name"] ?>">
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="first_name" placeholder="First Name" type="text" value="">
                             </div>
                           </div>
                         </div>
@@ -225,7 +330,7 @@
                           <label class="control-label">Last Name</label>
                           <div class="inputGroupContainer">
                             <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="last_name" placeholder="Last Name" type="text" value="<?php echo $_POST["last_name"] ?>">
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span> <input class="form-control" name="last_name" placeholder="Last Name" type="text" value="">
                             </div>
                           </div>
                         </div>
@@ -235,7 +340,7 @@
                       <label class="control-label" for="inputemail">E-Mail</label>
                       <div class="inputGroupContainer">
                         <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-at"></i></span> <input aria-describedby="inputemailStatus" class="form-control" id="inputemail" name="email" placeholder="j.smith@hotmail.com" type="text" value="<?php echo $_POST["email"]?>">
+                          <span class="input-group-addon"><i class="fa fa-at"></i></span> <input aria-describedby="inputemailStatus" class="form-control" id="inputemail" name="email" placeholder="j.smith@hotmail.com" type="text" value="">
                         </div>
                       </div><span aria-hidden="true" class="fa fa-ok form-control-feedback"></span> <span class="sr-only" id="inputemailStatus">(success)</span>
                     </div><!-- Text input-->
@@ -243,7 +348,7 @@
                       <label class="control-label">Phone No.</label>
                       <div class="inputGroupContainer">
                         <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-phone"></i></span> <input class="form-control" name="phone" placeholder="0161 282 1930" type="text" value="<?php echo $_POST["phone"]?>">
+                          <span class="input-group-addon"><i class="fa fa-phone"></i></span> <input class="form-control" name="phone" placeholder="0161 282 1930" type="text" value="">
                         </div>
                       </div>
                     </div><!-- Text area -->
@@ -252,7 +357,7 @@
                       <div class="inputGroupContainer">
                         <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-terminal"></i></span> 
-                          <textarea class="form-control" name="comment" placeholder="Write your message here" rows="6" value="<?php echo $_POST["comment"]?>"></textarea>
+                          <textarea class="form-control" name="comment" placeholder="Write your message here" rows="6" value=""></textarea>
                         </div>
                       </div>
                     </div>
@@ -270,7 +375,7 @@
                       <div class="col-xs-7 pull-right">
                         <!-- Button -->
                         <div class="form-group">
-                          <button class="btn btn-block btn-green text-light text-hover-light" type="submit">Send your message <span class="fa fa-send"></span></button>
+                          <button class="btn btn-block btn-green text-dark text-hover-dark" type="submit">Send your message <span class="fa fa-send"></span></button>
                         </div>
                       </div>
                     </div>
@@ -284,7 +389,7 @@
               </div>
             </div>
             <div class="col-xs-12 col-md-6 col-md-offset-1 google-map">
-              <h2>We are here <i class="fa fa-map-signs fa-lg pull-right"></i></h2>
+              <h2 class="color-complement-0">We are here <i class="fa fa-map-signs fa-lg pull-right"></i></h2>
               <p>Having a send off that suits you is everyone's last wish. Make the choices today! So your family don’t have to worry through their time of grieving.</p>
               <div class="map">
                 <iframe allowfullscreen height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152213.1108149693!2d-2.1689027469937985!3d53.4089267091372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb370ca6f3863%3A0xc88a80d07b2baad4!2sThe+Funeral+Planning+Company!5e0!3m2!1sen!2suk!4v1496942608584"></iframe>
@@ -294,13 +399,10 @@
         </div><!-- END main site areas -->
       </section>
 
-    <section class="jumbobox">
-      <div class="container">
-        
+    <section class="container-fluid">
         <div class="row">
-          <h2 class="pop-statement bkcolor-complement-0 ">Looking forward to hearing from you soon<i class="fa fa-comments-o fa-lg"></i></h2>
+            <h2 class="pop-statement margin-top-reset bkcolor-complement-0 wow flipInX" data-wow-delay="1500ms" data-wow-offeset="250">We are looking forward to hearing from you soon<i class="fa fa-comments-o fa-lg"></i></h2>
         </div>
-      </div>
     </section>
 
     <footer>
@@ -315,13 +417,13 @@
                   <h5 itemprop="name">The Funeral Planning Company</h5>
                   <h6>The Independent Agent</h6>
                   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                      <span itemprop="streetAddress">15 Kingston Mill</span><br>
+                      <span itemprop="streetAddress">15 Kingston Business Centre</span><br>
                       <span itemprop="addressLocality">Stockport</span><br>
                       <span itemprop="addressRegion">Greater Manchester</span> 
                       <span itemprop="postalCode">SK3 0AL</span>
                   </div>
                   <div class="contact-methods">
-                    <i class="fa fa-phone text-dark" aria-hidden="true"></i> <span itemprop="telephone"><a class="tel-no" href="tel:+448000987931">0800 0987 931</a></span>
+                    <i class="fa fa-phone text-dark" aria-hidden="true"></i> <span itemprop="telephone"><a class="tel-no" href="tel:+448000987931">0800 098 7931</a></span>
                   
                     <i class="fa fa-envelope text-dark" aria-hidden="true"></i> <span itemprop="email"><a class="email" href="mailto:info@thefuneralplanningcompany.co.uk">email us</a></span>
                   </div>
@@ -352,7 +454,7 @@
 
               <div class="footer-widget col-xs-12 col-md-3">
                 <h5>Stay Informed</h5>
-                <form action="http://showcaseimagery.us5.list-manage.com/subscribe/post?u=39d994d3c065f260150e35a71&amp;id=3f7cc56b82" method="post" id="pulse" class="validate form-inline" target="_blank" novalidate="">
+                <form action="thefuneralplanningcompany.us16.list-manage.com/subscribe/post?u=fb90af104341150f76e976425&amp;id=544b2b8d29" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                   <div class="subscribe">
                       <input type="email" name="EMAIL" placeholder="Enter your email">
                       <button> Subscribe </button>
@@ -361,15 +463,15 @@
                 <br>
                 <h5>Get Connected</h5>
                 <ul class="list-inline social-links">
-                  <li><a href="https://goo.gl/i1m0sj"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="https://goo.gl/i1m0sj" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 
-                  <li><a href="https://goo.gl/wIHnCB"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                  <li><a href="https://goo.gl/wIHnCB" data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
 
-                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a href="https://goo.gl/o9Zaou" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google+"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 
-                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  <li><a href="https://goo.gl/oJqyLN" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 
-                  <li><a href="https://goo.gl/aCigPh"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="https://goo.gl/aCigPh" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 </ul>
               </div>
 
@@ -380,9 +482,11 @@
             <div class="row sub-footer">
 
               <div class="col-xs-12 col-md-8">
-                <ul class="list-inline">
-                  <li><a href="legal/privacy.html" class="sub-footer-text">Privacy</a></li>
-                  <li><a href="legal/legal.html" class="sub-footer-text">Legal</a></li>
+                <ul class="list-inline legal">
+                  </li>
+                  <li><a href="site/sitemap.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="View our website structure" class="sub-footer-text">Sitemap</a></li>
+                  <li><a href="site/privacy.html" class="sub-footer-text" data-toggle="tooltip" data-placement="top" title="" data-original-title="Read our privacy policy">Privacy</a></li>
+                  <li><a href="site/legal.html" data-toggle="tooltip" data-placement="top" title="" data-original-title="Read our legal notice" class="sub-footer-text">Legal</a></li>
                   <li class="company-reg">Registered in England and Wales, Company Registration No. 09341100 </li>
                   <li class="company-reg">Data Protection No. ZA104435</li>
                 </ul>
@@ -429,8 +533,8 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
     <script src="js/flexslider/jquery.flexslider.js" type="text/javascript"></script>
-    <script src="js/owl-carousel/owl.carousel.js" type="text/javascript"></script>
     <script src="js/contact-val.js?v=1" type="text/javascript"></script>
-    <script src="js/main.js?v=1" type="text/javascript"></script>
+    <script async src="js/wow.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
   </body>
 </html>

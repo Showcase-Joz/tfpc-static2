@@ -129,6 +129,15 @@ $(window).load(function() {
 			$("html, body").animate({ scrollTop: 0 }, 1000);
 				return false;
 		});
+
+    // init WOW
+      var wow = new WOW(
+        {
+          mobile:       false,       // trigger animations on mobile devices (default is true)
+          live:         true,       // act on asynchronously loaded content (default is true)
+          }
+      );
+      wow.init();
     
 }); 
 
@@ -138,15 +147,6 @@ $(window).load(function() {
 /*global jQuery:false */
 jQuery(document).ready(function($) {
 "use strict";
-
-  		// init WOW
-  		var wow = new WOW(
-  		  {
-  		    mobile:       false,       // trigger animations on mobile devices (default is true)
-  		    live:         true,       // act on asynchronously loaded content (default is true)
-  		    }
-  		);
-  		wow.init();
 
 	    
     //hide/show accessibiliy content
