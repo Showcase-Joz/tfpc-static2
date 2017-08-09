@@ -15,7 +15,7 @@ B=b+N),R=W?a.right-B:a.left+B;var E=a.getPixelForTick(n);E+=i.aliasPixel(h),L=a.
 
 
 /* build the graph with these variables  */
-var ctx = document.getElementById('myChart');
+var ctx = document.getElementById('funeral-costs');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {  

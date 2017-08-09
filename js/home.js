@@ -162,7 +162,7 @@ jQuery(document).ready(function($) {
          var target = this.hash,
          $target = $(target + "");
          $('html, body').stop().animate({
-             'scrollTop': $target.offset().top + 21
+             'scrollTop': $target.offset().top + (21)
          }, 900, 'swing', function () {
          window.location.hash = target;
          });
@@ -184,11 +184,11 @@ jQuery(document).ready(function($) {
     $.googlePlaces = function(element, options) {
 
         var defaults = {
-              placeId: 'ChIJYzhvynCze0gR1Kore9CAisg' // placeId provided by google api documentation
-            , render: ['reviews']
-            , min_rating: 4
-            , max_rows: 3
-            , rotateTime: 0
+            placeId: 'ChIJYzhvynCze0gR1Kore9CAisg', // placeId provided by google api documentation
+            render: ['reviews'],
+            min_rating: 4,
+            max_rows: 3,
+            rotateTime: 0
         };
 
         var plugin = this;

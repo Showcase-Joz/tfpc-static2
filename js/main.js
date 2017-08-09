@@ -160,7 +160,7 @@ jQuery(document).ready(function($) {
          var target = this.hash,
          $target = $(target + "");
          $('html, body').stop().animate({
-             'scrollTop': $target.offset().top + 21
+             'scrollTop': $target.offset().top + (21)
          }, 900, 'swing', function () {
          window.location.hash = target;
          });
