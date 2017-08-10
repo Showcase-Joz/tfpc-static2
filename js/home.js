@@ -152,11 +152,29 @@ jQuery(document).ready(function($) {
 
 	    
     //hide/show accessibiliy content
-    $('#show-accessability').click(function(){
-        $('.accessability-bound').slideToggle('500');
-        $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
-    });
+    // $('#show-accessability').click(function(){
+    //     $('.accessability-bound').Toggle();
+    //     $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
+        
+    // });
     
+    $('#show-accessability').on('click',function(){
+
+    if($(this).attr('data-click-state') == 1) {
+    $(this).attr('data-click-state', 0);
+    $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
+    $('.accessability-bound').slideUp();
+    } else {
+    $(this).attr('data-click-state', 1);
+    $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
+    $('.accessability-bound').slideDown();
+    $('.accessability-bound').removeAttr("style");
+    }});
+    
+
+
+
+
     $('a[href^="#"]').on('click',function (e) {
          e.preventDefault();
          var target = this.hash,
