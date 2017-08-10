@@ -149,24 +149,59 @@ jQuery(document).ready(function($) {
 "use strict";
 
 	    
-    //hide/show accessibiliy content
-    $('#show-accessability').click(function(){
-        $('.accessability-bound').slideToggle('500');
-        $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
-    });
     
-    $('a[href^="#"]').on('click',function (e) {
-         e.preventDefault();
-         var target = this.hash,
-         $target = $(target + "");
-         $('html, body').stop().animate({
-             'scrollTop': $target.offset().top + (21)
-         }, 900, 'swing', function () {
-         window.location.hash = target;
-         });
-     });
+    // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
 
+//hide/show accessibiliy content
+    $('#show-accessability').on('click',function(){
 
+    if($(this).attr('data-click-state') == 1) {
+    $(this).attr('data-click-state', 0);
+    $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
+    $('.accessability-bound').slideUp();
+    } else {
+    $(this).attr('data-click-state', 1);
+    $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
+    $('.accessability-bound').slideDown();
+    $('.accessability-bound').removeAttr("style");
+    }});
+
+    
 });
     // on event onclick
     noevent=function(e){

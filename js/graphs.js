@@ -120,8 +120,20 @@ var myChart = new Chart(ctx, {
                         return '£' + value;
                     },
                     beginAtZero:true
-                }
-            }]
+                },
+                display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Cost of Funeral'
+                    }
+            }],
+            xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Year ' + String.fromCharCode(177) +'data source "sunlife cost of dying report 2016"'
+                    }
+                }],
         },
         title: {
             display: true,

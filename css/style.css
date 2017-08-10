@@ -87,10 +87,15 @@ details {
 .margin-top-reset {
     margin-top: 0px;
 }
+.margin-bottom-reset {
+    margin-bottom: 0px;
+}
 .margin-bottom-20 {
     margin-bottom: 20px !important;
 }
-
+.margin-top-20 {
+    margin-top: 20px !important;
+}
 .container {
     padding: 0 20px 0 20px;
     position: relative;
@@ -889,7 +894,18 @@ section.top-controls div .top-control-item {
     padding-top: 20px;
     text-align: center;
 }
-
+section.top-controls div h5 {
+    position: absolute;
+    bottom: 25%;
+    right: 0;
+    margin-right: -10px;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    color: #fff5c4;
+    font-size: x-small;
+    letter-spacing: 2px;
+    word-spacing: 0px;
+}
 section.top-controls div .top-control-item a span,section.top-controls div .top-control-item button span {
     padding-top: 10px;
     padding-bottom: 12px;
@@ -1068,8 +1084,8 @@ section#partners .partner-slider-controls .btn {
 
 
 /* Fonts */
-.pricely-chart { font-family: 'Noto Serif', Arial, sans-serif; }
-.pricely-chart h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; font-weight: 300; }
+.pricely-chart { font-family: 'Noto Sans', Arial, sans-serif; }
+.pricely-chart h1,.pricely-chart h2,.pricely-chart h3,.pricely-chart h4,.pricely-chart h5,.pricely-chart h6 { font-family: 'Open Sans', sans-serif; font-weight: 300; }
 .pricely-chart .fa { color: #9b9b9b; }
 
 
@@ -1084,7 +1100,7 @@ section#partners .partner-slider-controls .btn {
 .pricely-figure { padding: 20px 0 30px; position: relative; }
 .pricely-currency { display: inline-block; font-size: 20px; font-weight: 400; position: absolute; top: 30px; }
 .pricely-amount { display: inline-block; font-size:xx-large; line-height: 70px; padding: 0 0 0 17px; }
-.pricely-foreword { display: block; font-family: 'Noto Serif', Arial, sans-serif; font-size: 14px; font-style: italic; padding: 0; }
+.pricely-foreword { display: block; font-family: 'Noto Sans', Arial, sans-serif; font-size: 14px; font-style: italic; padding: 0; }
 .pricely-paragraph { font-size: 14px; line-height: 20px; margin: 22px; text-align: left; }
 .pricely-paragraph span.fa { font-size: 40px; color:#8065B2; }
 .pricely-paragraph strong { font-weight: 600; }
@@ -1625,7 +1641,12 @@ a.instruction:not(.focus) {
     display: block;
     width: 100%;
 }
-
+#compare-funeral-plans ul.nav-tabs {
+    border-bottom: none;
+}
+#compare-funeral-plans  .container-fluid {
+    margin-top: -35px;
+}
 .tel-no,
 .tel-no:focus,
 .tel-no:hover,
@@ -1646,6 +1667,21 @@ a.instruction:not(.focus) {
 
 /* LISTS */
 
+#large-list ul li {
+    font-family: 'Noto Sans', Arial, sans-serif; 
+    font-size: larger;
+    margin-right: 50px;
+}
+
+#large-list ul li:before {
+    content: '■';
+    color: #cd545a;
+    float: left;
+    width: 1.5em;
+    font-size: 130%;
+    position: relative;
+    top: -3px;
+}
 
 /* IMAGES */
 
@@ -2063,6 +2099,11 @@ footer .footer-widget button {
 .tooltip.right>.tooltip-arrow {
     border-right: 5px solid #ffe985;
 }
+
+canvas #funeral-costs {
+    height: 40vh;
+    width: 80vw;
+}
 #contact_form .input-group-addon {
     color: #fb8389;
     background-color: #bdeb7b;
@@ -2113,6 +2154,8 @@ footer .footer-widget button {
 }
 .calendly-inline-widget iframe {
     position: absolute;
+    height: 100%;
+    width: 100%;
 }
 .calendly-inline-widget .header {
   margin:auto;
