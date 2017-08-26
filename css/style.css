@@ -34,7 +34,7 @@
 
 
 /* BASIC STYLES */
-*:focus {
+*:focus,.btn-access:focus {
     outline: none;
 }
 body {
@@ -1479,7 +1479,12 @@ footer .copyright:hover {
 
 
 /* ADDITIONAL TYPOGRAPHY */
-
+.lowercase {
+  text-transform: lowercase;
+}
+.uppercase {
+  text-transform: uppercase;
+}
 .justify {
     text-align: justify;
 }
@@ -1503,6 +1508,15 @@ footer .copyright:hover {
 .pop-statement.quote {
     text-transform: initial;
     font-style: italic;
+}
+.pop-statement i.plans {
+    font-size: 18px;
+    font-style: italic;
+    text-transform: initial;
+    word-spacing: initial;
+    letter-spacing: 1px;
+    color: #ffe985;
+    font-weight: 600;
 }
 .inline-of-text {
     display: inherit;
@@ -1652,7 +1666,7 @@ a.instruction:not(.focus) {
 .tel-no:hover,
 .email,
 .email:focus,
-.email:hover {
+.email:hover{
     color: #95c11f;
     text-decoration: none;
     text-transform: uppercase;
@@ -1670,7 +1684,6 @@ a.instruction:not(.focus) {
 #large-list ul li {
     font-family: 'Noto Sans', Arial, sans-serif; 
     font-size: larger;
-    margin-right: 50px;
 }
 
 #large-list ul li:before {
@@ -1681,6 +1694,9 @@ a.instruction:not(.focus) {
     font-size: 130%;
     position: relative;
     top: -3px;
+}
+#large-list ul li span {
+  
 }
 
 /* IMAGES */
@@ -1763,22 +1779,23 @@ input#mc-embedded-subscribe {
     font-size: 30px;
 }
 footer .footer-widget button {
-    background-color: #2e2d2d;
-    color: #666;
+    background-color: #FFE985;
+    color: #1f1f1f;
     border: none;
     padding: 8.3px 10px;
     width: 35%;
+    height:48px;
     position: relative;
     margin: auto;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #f7f7f7;
     transition: 300ms all ease-in-out;
 }
 
 footer .footer-widget button:hover {
-    color: #FFE985;
+    background-color: #2e2d2d;
+    color: #f7f7f7;
 }
 
 
@@ -2156,6 +2173,7 @@ canvas #funeral-costs {
     position: absolute;
     height: 100%;
     width: 100%;
+    border:none;
 }
 .calendly-inline-widget .header {
   margin:auto;
@@ -2331,6 +2349,7 @@ canvas #funeral-costs {
     .accessibility-panel div a {
         color: #ffffff;
         text-decoration: none;
+        transition: 300ms all ease-in-out;
     }
 
     .accessibility-panel div:hover a {

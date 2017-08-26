@@ -184,7 +184,7 @@
                             </li>
                             <li><a href="contact.html">Contact</a></li>
                             <li>
-                                <button onclick="noevent(event)" data-click-state="1" class="btn btn-link visible-md-inline visible-lg-inline wow bounce delayed" data-wow-delay="7s" data-placement="top" data-wow-duration="750ms" data-wow-iteration="1" title="" data-original-title="Accessibility Options" id="show-accessability"><i class="fa fa-universal-access fa-2x fa-lg wow pulse delayed" data-wow-duration="2s" data-wow-delay="5s" data-placement="top" data-wow-iteration="infinite" aria-hidden="true"></i></button>
+                                <button onclick="noevent(event)" data-click-state="" class="btn btn-link visible-md-inline visible-lg-inline wow bounce delayed" data-wow-delay="7s" data-placement="top" data-wow-duration="750ms" data-wow-iteration="1" title="" data-original-title="Accessibility Options" id="show-accessability"><i class="fa fa-universal-access fa-2x fa-lg wow pulse delayed" data-wow-duration="2s" data-wow-delay="5s" data-placement="top" data-wow-iteration="infinite" aria-hidden="true"></i></button>
                             </li>
                         </ul>
                     </div>
@@ -454,46 +454,23 @@
 
         </div>
         <!-- Modals -->
-        <!-- call back form -->
-        <div aria-hidden="true" class="modal fade" id="appointments" role="dialog" tabindex="-1">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header bkcolor-secondary-1-3">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title text-light"  ><i class="fa fa-phone fa-2x color-primary-1 fa-border" aria-hidden="true"></i> Book your Telephone Appointment</h4>
-                    </div>
-                    <div class="modal-body">
-                        <h5 class="text-center">
-            Book your own call back appointment with us, at a time and date that suits you.
-          </h5>
-                        <hr>
-                        <!-- Calendly inline widget begin -->
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/thefuneralplanningcompany/callback" data-processed="true" style="position: relative;null">
-                            <iframe src="https://calendly.com/thefuneralplanningcompany/callback"></iframe>
-                        </div>
-                        <!-- Calendly inline widget end -->
-                    </div>
-                    <div class="modal-footer bkcolor-primary-0">
-                        <p class="pull-left color-secondary-2-4"><i class="fa fa-info-circle drop-fa fa-2x color-complement-0 wow tada" data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="2s" aria-hidden="true"></i> <em><small>Please note that appointments can take upto 45 minutes to complete.</small></em></p>
-                        <button aria-hidden="true" class="btn btn-purple" data-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <!-- Modals -->
+        
         <!-- referral -->
         <div aria-hidden="true" class="modal fade in" id="referral" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header bkcolor-secondary-1-3">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h3 class="modal-title text-light"  ><i class="fa fa-gift fa-2x color-primary-1 fa-border" aria-hidden="true"> + <i class="fa fa-user color-primary-1" aria-hidden="true"></i></i> Invite a Friend/Family Member</h3>
+                        <h3 class="modal-title text-light" id="myModalLabel"><i class="fa fa-gift fa-2x color-primary-1 fa-border" aria-hidden="true"> + <i class="fa fa-user color-primary-1" aria-hidden="true"></i></i> Invite a Friend/Family Member</h3>
                     </div>
                     <div class="modal-body">
                         <h3 class="text-center margin-bottom-20">
                     You can claim £50 of Love2Shop vouchers for <strong>both</strong> and your invitee.<br/>
                     <small>Love2Shop vouchers can be spent at many popular high-street stores as well as family day's out and even in restaurants.</small>
                   </h3>
-                        <form action="//stopthebailiff.us12.list-manage.com/subscribe/post?u=d4b4e24ed18df3c8980f65882&amp;id=4b6e35a623" method="post" name="mc-embedded-subscribe-form" class="validate form-horizontal" target="_blank" novalidate>
+                        <form action="//stopthebailiff.us12.list-manage.com/subscribe/post?u=d4b4e24ed18df3c8980f65882&amp;id=4b6e35a623" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-horizontal" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
                                 <div class="col-md-6">
                                     <div class="panel bkcolor-secondary-2-2 text-light">
                                         <div class="panel-heading bkcolor-secondary-2-3">
@@ -505,7 +482,7 @@
                                                 <label for="mce-EMAIL" class="col-sm-4 control-label">Email</label>
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
-                                                        <input type="email" value="" class="form-control required email" name="EMAIL" id="mce-EMAIL" placeholder="jane.doe@example.com">
+                                                        <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" placeholder="jane.doe@example.com">
                                                         <span class="input-group-addon"><i class="fa fa-asterisk fa-fw"></i></span>
                                                     </div>
                                                 </div>
@@ -539,7 +516,7 @@
                                             </div>
                                             <div class="clear">
                                                 <div class="form-group">
-                                                    <label for="mc-embedded-subscribe" class="col-sm-4 control-label"></label>
+                                                    <label for="mc-embedded-subscribe" class="col-sm-4 control-label">Get your vouchers</label>
                                                     <div class="col-sm-8">
                                                         <input type="submit" value="Invite my friend" name="subscribe" id="mc-embedded-subscribe" class="btn btn-purple btn-block">
                                                     </div>
@@ -556,25 +533,51 @@
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                                     <input type="text" name="b_d4b4e24ed18df3c8980f65882_4b6e35a623" tabindex="-1" value="">
                                 </div>
+                            </div>
                         </form>
-                        </div>
-                        <!--End mc_embed_signup-->
-                    </div>
-                    <div class="modal-footer bkcolor-primary-0">
+                      </div>
+                      <div class="modal-footer bkcolor-primary-0">
                         <div class="row">
                             <div class="col-md-10">
                                 <i class="fa fa-info-circle pull-left drop-fa fa-2x color-complement-0 wow tada" data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="2s" aria-hidden="true"></i>
-                                <p>Love2Shop outlets - Please <a href="downloads/l2s-voucher-retail-list.pdf" target="_blank">view</a> the official list of available outlets. <a class="btn btn-link" href="downloads/l2s-voucher-retail-list.pdf" download="l2s-voucher-retail-list.pdf" target="_blank">Or download the list here <i class="fa fa-download"></i></a></p>
+                                <p>Love2Shop outlets - Please <a href="downloads/l2s-voucher-retail-list.pdf" target="_blank">view <i class="fa fa-eye" aria-hidden="true"></i></a> the official list of available outlets. <a class="btn btn-link" href="downloads/l2s-voucher-retail-list.pdf" download="l2s-voucher-retail-list.pdf" target="_blank">Or download the list here <i class="fa fa-download" aria-hidden="true"></i></a></p>
                             </div>
                             <div class="col-md-2">
                                 <button aria-hidden="true" class="btn btn-purple btn-lg" data-dismiss="modal">Cancel</button>
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
-            <!-- protected trust Modal -->
-            <div aria-hidden="true" class="modal fade" id="protection" role="dialog" tabindex="-1">
+        <!-- call back form -->
+        <div aria-hidden="true" class="modal fade" id="appointments" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bkcolor-secondary-1-3">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-light" id="myModalLabel"><i class="fa fa-phone fa-2x color-primary-1 fa-border" aria-hidden="true"></i> Book your Telephone Appointment</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="text-center">
+            Book your own call back appointment with us, at a time and date that suits you.
+          </h5>
+                        <hr>
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/thefuneralplanningcompany/callback" data-processed="true" style="position: relative;null">
+                            <iframe src="https://calendly.com/thefuneralplanningcompany/callback" width="100%" height="100%" frameborder="0"></iframe>
+                        </div>
+                        <!-- Calendly inline widget end -->
+                    </div>
+                    <div class="modal-footer bkcolor-primary-0">
+                        <p class="pull-left color-secondary-2-4"><i class="fa fa-info-circle drop-fa fa-2x color-complement-0 wow tada" data-wow-iteration="3" data-wow-duration="2s" data-wow-delay="2s" aria-hidden="true"></i> <em><small>Please note that appointments can take upto 45 minutes to complete.</small></em></p>
+                        <button aria-hidden="true" class="btn btn-purple" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- protected trust Modal -->
+        <div aria-hidden="true" class="modal fade" id="protection" role="dialog" tabindex="-1">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header bkcolor-secondary-1-3">
@@ -636,6 +639,17 @@
             d.getElementsByTagName("head")[0].appendChild(s);
         })();
         </script>
+        
+        <script type='text/javascript'>
+        window.__lo_site_id = 89795;
+        
+        (function() {
+        var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+        wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+        })();
+        </script>
+        <script async src='https://p8h7t6p2.map2.ssl.hwcdn.net/fp/Scripts/fppixel.js' data-cid='3688605357'></script>
 </body>
 
 </html>

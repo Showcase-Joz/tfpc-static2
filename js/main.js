@@ -181,7 +181,7 @@ $('a[href*="#"]')
           } else {
             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
             $target.focus(); // Set focus again
-          };
+          }
         });
       }
     }
@@ -191,15 +191,22 @@ $('a[href*="#"]')
     $('#show-accessability').on('click',function(){
 
     if($(this).attr('data-click-state') == 1) {
-    $(this).attr('data-click-state', 0);
-    $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
-    $('.accessability-bound').slideUp();
+      $(this).attr('data-click-state', 0);
+      $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
+      $('.accessability-bound').slideUp();
+  
+    } else if ($(this).attr('data-click-state', 1)) {
+      $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
+      $('.accessability-bound').slideDown();
+      $('.accessability-bound').removeAttr("style");
+    
     } else {
-    $(this).attr('data-click-state', 1);
-    $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
-    $('.accessability-bound').slideDown();
-    $('.accessability-bound').removeAttr("style");
-    }});
+      $(this).attr('data-click-state', 1);
+      $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
+      $('.accessability-bound').slideDown();
+      $('.accessability-bound').removeAttr("style");
+    }
+    });
 
     
 });
