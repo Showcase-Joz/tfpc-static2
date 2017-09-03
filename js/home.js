@@ -148,31 +148,59 @@ $(window).load(function() {
 jQuery(document).ready(function($) {
 "use strict";
 
-  		
+  // set cookie variable in memory
+    var accessabilityCookie = sessionStorage.getItem("accessibility-menu")
+    console.log(sessionStorage.getItem("accessibility-menu"));
 
-	    
-    //hide/show accessibiliy content
-    // $('#show-accessability').click(function(){
-    //     $('.accessability-bound').Toggle();
-    //     $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
-        
-    // });
-    
-    $('#show-accessability').on('click',function(){
+    // check to see if cookie exixts and set .accessability-bound to reflect state
+    if (accessabilityCookie === null || (window.sessionStorage && window.sessionStorage.getItem('accessability-state') === 'down')) {
+        $('.accessability-bound').slideDown();
+        $('#show-accessability').attr('data-click-state', 0);
+        // sessionStorage.setItem("accessibility-menu","down");
+        console.log('awesome, new user. pull menu down');
 
-    if($(this).attr('data-click-state') == 1) {
-    $(this).attr('data-click-state', 0);
-    $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
-    $('.accessability-bound').slideUp();
+    } else if (accessabilityCookie === 'down') {
+        $('#show-accessability').attr('data-click-state', 0);
+        // sessionStorage.setItem("accessibility-menu","down");
+        $('.accessability-bound').removeClass('bounceInDown');
+        $('.accessability-bound').show();
+        $('.accessibility-info').addClass('shine');
+        console.log('old user, already pulled menu down');
+        console.log(accessabilityCookie + ' test');
+
     } else {
-    $(this).attr('data-click-state', 1);
-    $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
-    $('.accessability-bound').slideDown();
-    $('.accessability-bound').removeAttr("style");
-    }});
-    
+        $('#show-accessability').attr('data-click-state', 1);
+        $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
+        $('.accessability-bound').slideToggle();
+        $('.accessability-bound').removeAttr("style");
+        // sessionStorage.setItem("accessibility-menu","up");
+        console.log('up awesome');
+        console.log(accessabilityCookie + ' test');
+    }
 
 
+
+    // toggle accessibiliy content adding cookie state
+    $('#show-accessability').on('click', function() {
+
+      // is data-click-state down? set it to up and update .accessability-bound to show this
+      if ($(this).attr('data-click-state') == 0) {
+          $(this).attr('data-click-state', 1);
+          $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
+          $('.accessability-bound').slideUp();
+          sessionStorage.setItem("accessibility-menu", "up");
+          console.log('up');
+      } 
+      // is data-click-state up? set it to down and update .accessability-bound to show this
+      else if ($(this).attr('data-click-state') == 1) {
+          $(this).attr('data-click-state', 0);
+          $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
+          $('.accessability-bound').slideDown();
+          $('.accessability-bound').removeAttr("style");
+          sessionStorage.setItem("accessibility-menu", "down");
+          console.log('down this');
+      }
+    });
 
 
     // Select all links with hashes
@@ -219,7 +247,10 @@ $('a[href*="#"]')
       e.preventDefault();
     };
 
-
+    //history back button action
+    function goBack() {
+        window.history.back();
+    }
 
     // load google places api for reviews data
     /* https://github.com/peledies/google-places */
