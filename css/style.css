@@ -1797,10 +1797,31 @@ footer .footer-widget button:hover {
     background-color: #2e2d2d;
     color: #f7f7f7;
 }
-
-
+footer .footer-widget >ul >li >button {
+    background: inherit;
+    color: inherit;
+    text-transform: inherit;
+    position: inherit;
+    height: auto;
+    padding: inherit;
+}
+footer .footer-widget >ul >li >button:hover {
+    background-color: inherit;
+}
 /* ++++++++++++ Standard Buttons  */
-
+.coming-soon {
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 43%;
+}
+.coming-soon >.btn {
+    height: 100px;
+    width: 200%;
+    border-bottom-left-radius: 300px;
+    border-top-left-radius: 0px;
+    font-size: xx-large;
+}
 .btn-yellow {
     color: #959595;
     background-color: #FFE985;

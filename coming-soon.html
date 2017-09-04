@@ -226,11 +226,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="coming-soon">
-                    <div class="col-xs-10 col-md-6">
-                    <botton onclick="goBack()" class="btn btn-lg">Back to </botton>
-                    </div>
-                </div>
                 <ul class="slides">
                     <li>
                         <img src="img/slides/coming-soon-splash.png" alt="black and white of young boys looking through a fence. webpage coming soon" />
@@ -239,9 +234,69 @@
                         </div>
                     </li>
                 </ul>
+                <div class="coming-soon">
+                    <button onclick="goBack()" class="btn btn-lg">Back to </button>
+                </div>
             </div>
             <!-- END Flexslider -->
         </section>
+        <!-- mini options panel -->
+        <section id="content" class="container-fluid top-controls">
+            <div class="">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">
+                    <h5>Quick links</h5>
+                        <div class="row row-inner">
+                            <div class="col-xs-3 top-control-item">
+                                <button data-toggle="modal" data-target="#referral">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#giftbox" />
+                                    </svg>
+                                    <span>Refer us for your FREE gift</span>
+                                </button>
+                            </div>
+                            <div class="col-xs-3 top-control-item">
+                                <a href="index.html#reviews">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#reviews" />
+                                    </svg>
+                                    <span>See what people are saying about us</span>
+                                </a>
+                            </div>
+                            <div class="col-xs-3 top-control-item">
+                                <a href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#compare" />
+                                    </svg>
+                                    <span>Compare our funeral plans</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-inner">
+                        <div id="floating" class="col-xs-12 col-md-4 left-border bkcolor-secondary-2-0 wow slideInRight">
+                            <div class="col-xs-6 top-control-item">
+                                <button data-toggle="modal" data-target="#appointments">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#calendar" />
+                                    </svg>
+                                    <span>Book a call back from us</span>
+                                </button>
+                            </div>
+                            <div class="col-xs-6 top-control-item">
+                                <button onclick="$crisp.push(['do', 'chat:open'])">
+                                    <svg class="icon">
+                                        <use xlink:href="img/control-svg-sprite.svg#smile-in-message" />
+                                    </svg>
+                                    <span>Let's do online messaging</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END mini options panel -->
         <footer>
             <div class="container">
                 <div class="row">
@@ -269,21 +324,21 @@
                             <div class="footer-widget col-xs-12 col-md-3">
                                 <h5>Top Products</h5>
                                 <ul class="footer-products">
-                                    <li><a href="#">Pride Simplicity</a></li>
-                                    <li><a href="#">Pride Essential</a></li>
-                                    <li><a href="#">Pride Plus</a></li>
-                                    <li><a href="#">More Funeral Plans</a></li>
-                                    <li><a href="#">Wealth Management </a></li>
+                                    <li><a href="comming-soon.html">Pride Simplicity</a></li>
+                                    <li><a href="comming-soon.html">Pride Essential</a></li>
+                                    <li><a href="comming-soon.html">Pride Plus</a></li>
+                                    <li><a href="funeral-plans.html">More Funeral Plans</a></li>
+                                    <li><a href="https://comfortestateplanning.co.uk" data-toggle="tooltip" data-placement="top" title="" data-original-title="Takes you to our partner mini site">Wealth Management</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget col-xs-12 col-md-3">
                                 <h5>Helpful Links</h5>
                                 <ul class="footer-products">
-                                    <li><a href="#">Get a FREE quote</a></li>
+                                    <li><button onclick="$crisp.push(['do', 'chat:open'])">Get a FREE quote</button></li>
                                     <li><a href="#" data-toggle="modal" data-target="#appointments">Book a Call Back</a></li>
-                                    <li><a href="#">Wealth Management Tips</a></li>
-                                    <li><a href="#">Our Funeral Plans</a></li>
-                                    <li><a href="#">Careers with us</a></li>
+                                    <li><a href="https://comfortestateplanning.co.uk" data-toggle="tooltip" data-placement="top" title="" data-original-title="Takes you to our partner mini site">Wealth Management Tips</a></li>
+                                    <li><a href="funeral-plans.html">Our Funeral Plans</a></li>
+                                    <li><a href="coming-soon.html">Careers with us</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget col-xs-12 col-md-3">

@@ -236,11 +236,11 @@ jQuery(document).ready(function($) {
     });
 
 });
-// on event onclick
-noevent = function(e) {
-    e.preventDefault();
-};
 //history back button action
     function goBack() {
         window.history.back();
     }
+// on event onclick
+noevent = function(e) {
+    e.preventDefault();
+};
