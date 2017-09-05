@@ -32,10 +32,38 @@
 
 /* PRELOADER */
 
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #95c11f;
+    /* change if the mask should have another color then white */
+    z-index: 99;
+    /* makes sure it stays on top */
+}
+
+#status {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(../img/touch/apple-touch-icon-180x180.png);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -250px 0 0 -250px;
+    /* is width and height divided by two */
+}
 
 /* BASIC STYLES */
-*:focus,.btn-access:focus {
-    outline: none;
+:focus {
+    outline: 0;    
+
 }
 body {
     line-height: 1.6em;
@@ -508,7 +536,9 @@ section#content,
 .bk-goldenleaves {
     background-color: #98012e;
 }
-
+.trust-sheild:hover {
+    color: #5C438D;
+}
 .text-light,
 .text-hover-light:hover,
 .text-goldenleaves{
@@ -1097,11 +1127,11 @@ section#partners .partner-slider-controls .btn {
 /* Headings Formatting */
 .pricely-label { display: block; font-size: 13px; letter-spacing: 1px; margin: 0 auto 10px; text-transform: uppercase; }
 .pricely-first-heading .pricely-label { font-weight: 600; }
-.pricely-figure { padding: 20px 0 30px; position: relative; }
+.pricely-figure { padding: 50px 0 30px; position: relative; }
 .pricely-currency { display: inline-block; font-size: 20px; font-weight: 400; position: absolute; top: 30px; }
 .pricely-amount { display: inline-block; font-size:xx-large; line-height: 70px; padding: 0 0 0 17px; }
-.pricely-foreword { display: block; font-family: 'Noto Sans', Arial, sans-serif; font-size: 14px; font-style: italic; padding: 0; }
-.pricely-paragraph { font-size: 14px; line-height: 20px; margin: 22px; text-align: left; }
+.pricely-foreword { margin-bottom: 40px; display: block; font-family: 'Noto Sans', Arial, sans-serif; font-size: 14px; font-style: italic; padding: 0; }
+.pricely-paragraph { font-size: 14px; line-height: 20px; margin: 16px; text-align: right; }
 .pricely-paragraph span.fa { font-size: 40px; color:#8065B2; }
 .pricely-paragraph strong { font-weight: 600; }
 
@@ -1115,8 +1145,10 @@ section#partners .partner-slider-controls .btn {
 /*===== Price Chart Specific =====*/
 
     /* Professional */
-    .pricely-pro .panel-heading { border-radius: 0; min-height: 300px; }
-    .pricely-pro li li.list-group-item { border-left-width: 1px; border-radius: 0; min-height: 45px; }
+    .pricely-pro .panel-heading { border-radius: 0; min-height: 330px; }
+    .pricely-pro ul.list-group { margin-bottom: 0px;}
+    .pricely-pro li li.list-group-item { border-left-width: 1px; border-radius: 0; min-height: 45px; padding: 10px 10px;}
+    .pricely-pro li li.list-group-item .fa-angle-double-right { color: #fff; }
     .pricely-pro li.pricely-first-heading li.list-group-item { border-left-width: 1px; border-radius: 0; min-height: 45px; }
 
     .pricely-pro { list-style: none; margin: 0; padding: 0; }
@@ -1464,6 +1496,7 @@ footer .sub-footer li a.sub-footer-text {
     transition: 300ms all ease-in-out;
 }
 
+.trust-sheild:hover,
 footer .copyright:hover,
 footer .sub-footer-text:hover {
     color: #CFB956;
@@ -1812,15 +1845,111 @@ footer .footer-widget >ul >li >button:hover {
 .coming-soon {
     position: absolute;
     z-index: 500;
-    top: 50%;
-    left: 43%;
+    top: 55%;
+    left: 0%;
+    opacity: 0.8;
+}
+.coming-soon:hover {
+    opacity: 1;
 }
 .coming-soon >.btn {
-    height: 100px;
-    width: 200%;
-    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
     font-size: xx-large;
+    padding: 20px 80px;
+    text-align: right;
+}
+.btn-pride { 
+  color: #e9bf75; 
+  background-color: #2A6BA2; 
+  border-color: #2A6BA2; 
+} 
+ 
+.btn-pride:hover, 
+.btn-pride:focus, 
+.btn-pride:active, 
+.btn-pride.active, 
+.open .dropdown-toggle.btn-pride { 
+  color: #e9bf75; 
+  background-color: #215785; 
+  border-color: #2A6BA2; 
+} 
+ 
+.btn-pride:active, 
+.btn-pride.active, 
+.open .dropdown-toggle.btn-pride { 
+  background-image: none; 
+} 
+ 
+.btn-pride.disabled, 
+.btn-pride[disabled], 
+fieldset[disabled] .btn-pride, 
+.btn-pride.disabled:hover, 
+.btn-pride[disabled]:hover, 
+fieldset[disabled] .btn-pride:hover, 
+.btn-pride.disabled:focus, 
+.btn-pride[disabled]:focus, 
+fieldset[disabled] .btn-pride:focus, 
+.btn-pride.disabled:active, 
+.btn-pride[disabled]:active, 
+fieldset[disabled] .btn-pride:active, 
+.btn-pride.disabled.active, 
+.btn-pride[disabled].active, 
+fieldset[disabled] .btn-pride.active { 
+  background-color: #2A6BA2; 
+  border-color: #2A6BA2; 
+} 
+ 
+.btn-pride .badge { 
+  color: #2A6BA2; 
+  background-color: #e9bf75; 
+}
+.btn-goldenleaves { 
+  color: #FFFFFF; 
+  background-color: #98012E; 
+  border-color: #98012E; 
+} 
+ 
+.btn-goldenleaves:hover, 
+.btn-goldenleaves:focus, 
+.btn-goldenleaves:active, 
+.btn-goldenleaves.active, 
+.open .dropdown-toggle.btn-goldenleaves { 
+  color: #FFFFFF; 
+  background-color: #800227; 
+  border-color: #98012E; 
+} 
+ 
+.btn-goldenleaves:active, 
+.btn-goldenleaves.active, 
+.open .dropdown-toggle.btn-goldenleaves { 
+  background-image: none; 
+} 
+ 
+.btn-goldenleaves.disabled, 
+.btn-goldenleaves[disabled], 
+fieldset[disabled] .btn-goldenleaves, 
+.btn-goldenleaves.disabled:hover, 
+.btn-goldenleaves[disabled]:hover, 
+fieldset[disabled] .btn-goldenleaves:hover, 
+.btn-goldenleaves.disabled:focus, 
+.btn-goldenleaves[disabled]:focus, 
+fieldset[disabled] .btn-goldenleaves:focus, 
+.btn-goldenleaves.disabled:active, 
+.btn-goldenleaves[disabled]:active, 
+fieldset[disabled] .btn-goldenleaves:active, 
+.btn-goldenleaves.disabled.active, 
+.btn-goldenleaves[disabled].active, 
+fieldset[disabled] .btn-goldenleaves.active { 
+  background-color: #98012E; 
+  border-color: #98012E; 
+} 
+ 
+.btn-goldenleaves .badge { 
+  color: #98012E; 
+  background-color: #FFFFFF; 
 }
 .btn-yellow {
     color: #959595;
@@ -2131,6 +2260,8 @@ footer .footer-widget button {
     -webkit-animation-iteration-count: 3;
     -webkit-animation-timing-function: cubic-bezier(.12,.89,.98,.47);
 }
+
+
 /* Tooltip */
 .tooltip.top .tooltip-inner,
 .tooltip.right .tooltip-inner,
@@ -2456,7 +2587,9 @@ canvas #funeral-costs {
     .review-item {
         flex: 1 1 33%;
     }
-
+    .pricely-paragraph {
+        font-size: 16px;
+    }
     section .interest-box:nth-child(2),
     section .interest-box:nth-child(3) {
         min-height: 270px;

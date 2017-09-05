@@ -236,6 +236,7 @@ jQuery(document).ready(function($) {
     });
 
 });
+
 //history back button action
     function goBack() {
         window.history.back();
