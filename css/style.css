@@ -40,7 +40,7 @@
     bottom: 0;
     background-color: #95c11f;
     /* change if the mask should have another color then white */
-    z-index: 99;
+    z-index: 1000;
     /* makes sure it stays on top */
 }
 
@@ -2495,7 +2495,7 @@ canvas #funeral-costs {
     .accessability-bound {
         background-color: rgba(0, 0, 0, 0.4);
         height: 160px;
-        min-width: 30%;
+        min-width: 20%;
         position: absolute;
         top: 0;
         right: 0;
