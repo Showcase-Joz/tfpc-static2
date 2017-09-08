@@ -190,6 +190,10 @@ jQuery(document).ready(function($) {
         $('.accessability-bound').slideDown();
         $('#show-accessability').attr('data-click-state', 0);
         // sessionStorage.setItem("accessibility-menu","down");
+        // set text size feature assets
+        sessionStorage.setItem('accessible-fontsize', 'off');
+        $('html').removeClass('fontsize');
+        $('.text').attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
         console.log('awesome, new user. pull menu down');
 
     } else if (accessabilityCookie === 'down') {
@@ -235,7 +239,43 @@ jQuery(document).ready(function($) {
       }
     });
 
-});
+    
+
+    // $('.toggle-contrast').on('click', function (e) {
+    //     if ($(this).attr('id') == "is_normal_contrast") {
+    //         $('head').append($("<link href='" + a11y_stylesheet_path + "' id='highContrastStylesheet' rel='stylesheet' type='text/css' />"));
+    //         $('body').addClass('contrast');
+    //         $(this).attr('id', 'is_high_contrast').attr('aria-pressed', true).addClass('active');
+    //         createCookie('a11y-high-contrast', '1');
+    //     } else {
+    //         $('#highContrastStylesheet').remove();
+    //         $('body').removeClass('contrast');
+    //         $(this).attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+    //         eraseCookie('a11y-high-contrast');
+    //     }
+    
+    // return false;
+    // });
+
+    $('.text').on('click', function(){
+        if ($(this).attr('id') == "is_normal_fontsize") {
+            $('html').addClass('fontsize');
+            $(this).attr('id', 'is_large_fontsize').attr('aria-pressed', true).addClass('active');
+            sessionStorage.setItem('accessible-fontsize', 'on');
+        } else {
+            $('html').removeClass('fontsize');
+            $(this).attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
+            sessionStorage.setItem('accessible-fontsize', 'off');
+        }
+    
+    return false;
+    });
+
+
+
+  });
+
+
 
 //history back button action
     function goBack() {

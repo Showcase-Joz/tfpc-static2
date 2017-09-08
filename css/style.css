@@ -61,6 +61,11 @@
 }
 
 /* BASIC STYLES */
+
+.fontsize p {
+  /* First font-size fallback to older browsers */
+  font-size: 200%;
+}
 :focus {
     outline: 0;    
 
@@ -906,8 +911,11 @@ section#content {
 section.top-controls {
     background-color: #B1A2CD;
     padding: 20px;
+    height: 140px;
 }
-
+section.top-controls #floating {
+    height: 140px;
+}
 section.top-controls .container {
     padding-top: 0px;
     margin-right: 10px;
@@ -926,7 +934,7 @@ section.top-controls div .top-control-item {
 }
 section.top-controls div h5 {
     position: absolute;
-    bottom: 25%;
+    bottom: 30%;
     right: 0;
     margin-right: -10px;
     transform: rotate(-90deg);
@@ -1761,7 +1769,12 @@ a.instruction:not(.focus) {
     transition: 600ms all ease-in-out;
 }
 
-
+.butterfly {
+    text-align: center;
+    margin: auto;
+    height: 100px;
+    width: auto;
+}
 
 
 /* BUTTONS */
@@ -2466,7 +2479,7 @@ canvas #funeral-costs {
 .pricely-chart .panel-heading { padding: 15px 10px; }
 
 .pricely-pro .panel-heading { border-left: 1px solid #ddd; min-height: inherit; }
-
+.pricely-pro .panel-heading img { visibility: visible;}
 .pricely-professional li.list-group-item .feature-hide { display: inline; padding: 0 0 0 10px; }
 
 /*.pricely-pro li.pricely-first-heading { display: none; }
@@ -2494,8 +2507,9 @@ canvas #funeral-costs {
 
     .accessability-bound {
         background-color: rgba(0, 0, 0, 0.4);
-        height: 160px;
-        min-width: 20%;
+        height: 180px;
+        width: 25%;
+        min-width: 400px;
         position: absolute;
         top: 0;
         right: 0;
@@ -2525,18 +2539,16 @@ canvas #funeral-costs {
         border-radius: 5px;
         cursor: pointer;
     }
-
     .accessibility-panel div a {
         color: #ffffff;
         text-decoration: none;
         transition: 300ms all ease-in-out;
     }
 
-    .accessibility-panel div:hover a {
+    .accessibility-panel div:hover a,.accessibility-panel div:hover span {
         color: #ffe985;
         text-decoration: none;
     }
-
     .accessibility-panel div span {
         border-top: 1px solid rgba(255, 255, 255, 0.3);
         margin-top: 10px;
