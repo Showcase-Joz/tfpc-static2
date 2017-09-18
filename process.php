@@ -29,6 +29,7 @@ $headers[] = "Bcc: " . $emailbcc;
 
 mail($destination, $subject, $message, implode("\r\n", $headers));
  
+header("Location: thanks.html");
 
 ?>
 
