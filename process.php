@@ -32,9 +32,3 @@ mail($destination, $subject, $message, implode("\r\n", $headers));
 header("Location: thanks.html");
 
 ?>
-
-<p>It worked! Thanks for your message:<br>
-<?php echo $message; ?>
- 
-<br>
-<a href="/">Go back home</a>
