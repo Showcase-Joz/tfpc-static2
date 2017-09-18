@@ -148,8 +148,47 @@ $(window).load(function() {
 jQuery(document).ready(function($) {
 "use strict";
 
-  // set cookie variable in memory
-    var accessabilityCookie = sessionStorage.getItem("accessibility-menu")
+
+    // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          }
+        });
+      }
+    }
+  });
+  
+  
+      // set cookie variable in memory
+    var accessabilityCookie = sessionStorage.getItem("accessibility-menu");
     console.log(sessionStorage.getItem("accessibility-menu"));
 
     // check to see if cookie exixts and set .accessability-bound to reflect state
@@ -157,6 +196,10 @@ jQuery(document).ready(function($) {
         $('.accessability-bound').slideDown();
         $('#show-accessability').attr('data-click-state', 0);
         // sessionStorage.setItem("accessibility-menu","down");
+        // set text size feature assets
+        sessionStorage.setItem('accessible-fontsize', 'off');
+        $('html').removeClass('fontsize');
+        $('.text').attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
         console.log('awesome, new user. pull menu down');
 
     } else if (accessabilityCookie === 'down') {
@@ -202,43 +245,38 @@ jQuery(document).ready(function($) {
       }
     });
 
+    
 
-    // Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+    // $('.toggle-contrast').on('click', function (e) {
+    //     if ($(this).attr('id') == "is_normal_contrast") {
+    //         $('head').append($("<link href='" + a11y_stylesheet_path + "' id='highContrastStylesheet' rel='stylesheet' type='text/css' />"));
+    //         $('body').addClass('contrast');
+    //         $(this).attr('id', 'is_high_contrast').attr('aria-pressed', true).addClass('active');
+    //         createCookie('a11y-high-contrast', '1');
+    //     } else {
+    //         $('#highContrastStylesheet').remove();
+    //         $('body').removeClass('contrast');
+    //         $(this).attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+    //         eraseCookie('a11y-high-contrast');
+    //     }
+    
+    // return false;
+    // });
+
+    $('.text').on('click', function(){
+        if ($(this).attr('id') == "is_normal_fontsize") {
+            $('html').addClass('fontsize');
+            $(this).attr('id', 'is_large_fontsize').attr('aria-pressed', true).addClass('active');
+            sessionStorage.setItem('accessible-fontsize', 'on');
+        } else {
+            $('html').removeClass('fontsize');
+            $(this).attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
+            sessionStorage.setItem('accessible-fontsize', 'off');
+        }
+    
+    return false;
+    });
+
 
 
 });
@@ -268,7 +306,7 @@ $('a[href*="#"]')
 
         var plugin = this;
 
-        plugin.settings = {}
+        plugin.settings = {};
 
         var $element = $(element),
              element = element;
@@ -286,7 +324,7 @@ $('a[href*="#"]')
               }
             }
           });
-        }
+        };
 
         var initialize_place = function(c){
           var map = new google.maps.Map(document.getElementById('map-plug'));
@@ -302,7 +340,7 @@ $('a[href*="#"]')
               c(place);
             }
           });
-        }
+        };
 
         var sort_by_date = function(ray) {
           ray.sort(function(a, b){
@@ -314,7 +352,7 @@ $('a[href*="#"]')
             return 0;
           });
           return ray;
-        }
+        };
 
         var filter_minimum_rating = function(reviews){
           for (var i = reviews.length -1; i >= 0; i--) {
@@ -323,7 +361,7 @@ $('a[href*="#"]')
             }
           }
           return reviews;
-        }
+        };
 
         var renderReviews = function(reviews){
           reviews = sort_by_date(reviews);
@@ -335,10 +373,10 @@ $('a[href*="#"]')
           for (var i = row_count; i >= 0; i--) {
             var stars = renderStars(reviews[i].rating);
             var date = convertTime(reviews[i].time);
-            html = html+"<div class='review-item'><div class='review-meta'><span class='review-author'>"+reviews[i].author_name+"</span><span class='review-sep'>, </span><span class='review-date'>"+date+"</span></div>"+stars+"<p class='review-text'>"+reviews[i].text+"</p></div>"
-          };
+            html = html+"<div class='review-item'><div class='review-meta'><span class='review-author'>"+reviews[i].author_name+"</span><span class='review-sep'>, </span><span class='review-date'>"+date+"</span></div>"+stars+"<p class='review-text'>"+reviews[i].text+"</p></div>";
+          }
           $element.append(html);
-        }
+        };
         
         var initRotation = function() {
             var $reviewEls = $element.children('.review-item');
@@ -354,7 +392,7 @@ $('a[href*="#"]')
                     $($reviewEls[currentIdx]).fadeIn('slow');
                 }, plugin.settings.rotateTime);
             }
-        }
+        };
 
         var renderStars = function(rating){
           var stars = "<div class='review-stars'><ul>";
@@ -362,7 +400,7 @@ $('a[href*="#"]')
           // fill in gold stars
           for (var i = 0; i < rating; i++) {
             stars = stars+"<li><i class='star'></i></li>";
-          };
+          }
 
           // fill in empty stars
           if(rating < 5){
@@ -388,7 +426,7 @@ $('a[href*="#"]')
     $.fn.googlePlaces = function(options) {
 
         return this.each(function() {
-            if (undefined == $(this).data('googlePlaces')) {
+            if (undefined === $(this).data('googlePlaces')) {
                 var plugin = new $.googlePlaces(this, options);
                 $(this).data('googlePlaces', plugin);
             }

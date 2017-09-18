@@ -182,7 +182,7 @@ jQuery(document).ready(function($) {
         });
 
     // set cookie variable in memory
-    var accessabilityCookie = sessionStorage.getItem("accessibility-menu")
+    var accessabilityCookie = sessionStorage.getItem("accessibility-menu");
     console.log(sessionStorage.getItem("accessibility-menu"));
 
     // check to see if cookie exixts and set .accessability-bound to reflect state
