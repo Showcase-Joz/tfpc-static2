@@ -1,10 +1,17 @@
-## Welcome to GitHub Pages
+## The Funeral Planning Company testing page
 
-You can use the [editor on GitHub](https://github.com/Showcase-Joz/tfpc-static2/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You can use this area to see what's gone into the website and testing of the [Current Version](https://showcase-joz.github.io/tfpc-static2/) via [this preview](https://showcase-joz.github.io/tfpc-static2/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This project was created for **M4rk Whit3 Enterpr1s3s** between the months of June and August 2017. Since then a couple of weeks have been spent on improving the functionality of the build; totalling around 3 months of work.
 
-### Markdown
+### History
+
+Old website: 
+![alt text][oldSite]
+
+[oldSite]: http://www.clipular.com/c/4624581351702528.png?k=nhJoGyaZEzgM1kXK4DG0evM_u_Y "Old the funeral planning company website"
+
+### Key features
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
