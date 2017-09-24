@@ -10,6 +10,7 @@
 /*
     Table of Content
 ==========================================
+    
     #Preloader
     #Basic Styles
     #Site Styles
@@ -24,7 +25,8 @@
     #Images
     #Buttons
     #Forms
-    #Misc 
+    #Misc
+    #Accessibility
     #Media Queries 
 
 */
@@ -2390,6 +2392,41 @@ canvas #funeral-costs {
     top: -1px;
 }
 
+/* ACCESSIBILITY */
+
+body.contrast {
+  background: black !important;
+  background-color: black !important;
+  background-image: none !important;
+  border: none;
+  color: yellow !important;
+}
+body.contrast * {
+  background: black !important;
+  background-color: black !important;
+  background-image: none !important;
+  border: none;
+  color: yellow !important;
+}
+body.contrast .accessibility-panel-item.switch {
+  border-right-color: #656565;
+}
+body.contrast .accessibility-panel-item.switch,
+body.contrast .accessibility-panel-item.switch span,
+body.contrast .accessibility-panel-item.switch i {
+    background-color: white !important;
+}
+body.contrast .accessibility-panel-item.switch .fa,
+body.contrast .accessibility-panel-item.switch span {
+    color: black !important;
+}
+body.contrast .flex-caption {
+  margin: 0px;
+}
+body.contrast .flex-caption h2 {
+    right: 0;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width:0\0) { /* Specific to IE */
@@ -2514,7 +2551,7 @@ canvas #funeral-costs {
         background-color: rgba(0, 0, 0, 0.4);
         height: 180px;
         width: 25%;
-        min-width: 400px;
+        min-width: 420px;
         position: absolute;
         top: 0;
         right: 0;
@@ -2535,26 +2572,32 @@ canvas #funeral-costs {
         text-align: center;
     }
 
-    .accessibility-panel div {
+    .accessibility-panel .accessibility-panel-item:not(.switch) {
         padding: 5px;
+        border-right: 1px solid transparent;
     }
 
-    .accessibility-panel div:hover {
+    .accessibility-panel .accessibility-panel-item:hover,
+    .accessibility-panel .accessibility-panel-item.switch {
         background-color: rgba(0, 0, 0, 0.6);
         border-radius: 5px;
         cursor: pointer;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 5px;
     }
-    .accessibility-panel div a {
+    .accessibility-panel .accessibility-panel-item a {
         color: #ffffff;
         text-decoration: none;
         transition: 300ms all ease-in-out;
     }
 
-    .accessibility-panel div:hover a,.accessibility-panel div:hover span {
+    .accessibility-panel .accessibility-panel-item:hover a,
+    .accessibility-panel .accessibility-panel-item:hover span {
         color: #ffe985;
         text-decoration: none;
     }
-    .accessibility-panel div span {
+    .accessibility-panel .accessibility-panel-item span span,
+    .accessibility-panel .accessibility-panel-item a span {
         border-top: 1px solid rgba(255, 255, 255, 0.3);
         margin-top: 10px;
         display: block;
@@ -2582,6 +2625,9 @@ canvas #funeral-costs {
         text-align: right;
         padding-top: 5px;
     }
+    .accessibility-info p {
+      font-size: initial;
+}
 
     div#floating.top-controls {
         width: 100%;
