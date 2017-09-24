@@ -187,43 +187,51 @@ $('a[href*="#"]')
   });
   
   
-      // set cookie variable in memory
-    var accessabilityCookie = sessionStorage.getItem("accessibility-menu");
-    console.log(sessionStorage.getItem("accessibility-menu"));
+  // set cookie variable in memory
+    var accessabilityCookie = sessionStorage.getItem('accessibility-menu');
 
     // check to see if cookie exixts and set .accessability-bound to reflect state
-    if (accessabilityCookie === null || (window.sessionStorage && window.sessionStorage.getItem('accessability-state') === 'down')) {
+    if (accessabilityCookie == null || (window.sessionStorage && window.sessionStorage.getItem('accessability-state') === '')) {
         $('.accessability-bound').slideDown();
+        // add click state option
         $('#show-accessability').attr('data-click-state', 0);
-        // sessionStorage.setItem("accessibility-menu","down");
-        // set text size feature assets
-        sessionStorage.setItem('accessible-fontsize', 'off');
+        // set session variables for accessibility box state and options
+        sessionStorage.setItem('accessibility-menu','down');
+        sessionStorage.setItem('accessibility-fontsize', 'off');
+        sessionStorage.setItem('accessibility-contrast', 'off');
+        // remove styling classes
         $('html').removeClass('fontsize');
+        $('body').removeClass('contrast');
+        $('.toggle-contrast').removeClass('switch');
+        $('.text').removeClass('switch');
         $('.text').attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
-        console.log('awesome, new user. pull menu down');
+        $('.toggle-contrast').attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+        console.log('awesome, new user. pull menu down and create fontsize & contrast variables');
 
-    } else if (accessabilityCookie === 'down') {
+    } else if (accessabilityCookie == 'down') {
+        // add click state option
         $('#show-accessability').attr('data-click-state', 0);
-        // sessionStorage.setItem("accessibility-menu","down");
+        // set session variable to down and update animations
+        sessionStorage.setItem('accessibility-menu', 'down');
         $('.accessability-bound').removeClass('bounceInDown');
         $('.accessability-bound').show();
         $('.accessibility-info').addClass('shine');
-        console.log('old user, already pulled menu down');
-        console.log(accessabilityCookie + ' test');
+        console.log('old user, already pulled menu down check fontsize & contrast variables');
 
     } else {
+        // add click state option
         $('#show-accessability').attr('data-click-state', 1);
+        // update animation and visual state
         $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
         $('.accessability-bound').slideToggle();
-        $('.accessability-bound').removeAttr("style");
-        // sessionStorage.setItem("accessibility-menu","up");
-        console.log('up awesome');
-        console.log(accessabilityCookie + ' test');
+        $('.accessability-bound').removeAttr('style');
+        // set session variable to up
+        sessionStorage.setItem('accessibility-menu', 'up');
+        console.log('accessibility menu is currently up');
     }
 
 
-
-    // toggle accessibiliy content adding cookie state
+   // toggle accessibiliy content adding cookie state
     $('#show-accessability').on('click', function() {
 
       // is data-click-state down? set it to up and update .accessability-bound to show this
@@ -232,7 +240,7 @@ $('a[href*="#"]')
           $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
           $('.accessability-bound').slideUp();
           sessionStorage.setItem("accessibility-menu", "up");
-          console.log('up');
+          console.log('accessibility menu up');
       } 
       // is data-click-state up? set it to down and update .accessability-bound to show this
       else if ($(this).attr('data-click-state') == 1) {
@@ -241,42 +249,93 @@ $('a[href*="#"]')
           $('.accessability-bound').slideDown();
           $('.accessability-bound').removeAttr("style");
           sessionStorage.setItem("accessibility-menu", "down");
-          console.log('down this');
+          console.log('accessibility menu down');
       }
     });
 
     
+    // set cookie variable in memory for accessibility contrast
+    var accessibilityContrast = sessionStorage.getItem('accessibility-contrast');
 
-    // $('.toggle-contrast').on('click', function (e) {
-    //     if ($(this).attr('id') == "is_normal_contrast") {
-    //         $('head').append($("<link href='" + a11y_stylesheet_path + "' id='highContrastStylesheet' rel='stylesheet' type='text/css' />"));
-    //         $('body').addClass('contrast');
-    //         $(this).attr('id', 'is_high_contrast').attr('aria-pressed', true).addClass('active');
-    //         createCookie('a11y-high-contrast', '1');
-    //     } else {
-    //         $('#highContrastStylesheet').remove();
-    //         $('body').removeClass('contrast');
-    //         $(this).attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
-    //         eraseCookie('a11y-high-contrast');
-    //     }
+    // check to see if cookie exists and set to reflect current state
+    if (accessibilityContrast === undefined || null || (window.sessionStorage && window.sessionStorage.getItem('accessability-contrast') === '')) {
+          $('body').removeClass('contrast');
+          $('.toggle-contrast').attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+          $('.toggle-contrast').removeClass('switch');
+          sessionStorage.setItem('accessibility-contrast', 'off');
+          console.log('accessibility contrast is now set to ' + accessibilityContrast);
+      } else if (accessibilityContrast == 'off') {
+          $('body').removeClass('contrast');
+          $('.toggle-contrast').attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+          sessionStorage.setItem('accessibility-contrast', 'off');
+          console.log('accessibility contrast is now set to ' + accessibilityContrast);
+      } else {
+          $('body').addClass('contrast');
+          $('.toggle-contrast').attr('id', 'is_high_contrast').attr('aria-pressed', true).addClass('active');
+          $('.toggle-contrast').addClass('switch');
+          sessionStorage.setItem('accessibility-contrast', 'on');
+          console.log('accessibility contrast is turned ' + accessibilityContrast);
+      }
+
+    $('.toggle-contrast').on('click', function () {
+        if ($(this).attr('id') == 'is_normal_contrast') {
+            $('body').addClass('contrast');
+            $(this).attr('id', 'is_high_contrast').attr('aria-pressed', true).addClass('active');
+            $(this).addClass('switch');
+            sessionStorage.setItem('accessibility-contrast', 'on');
+            console.log('accessibility contrast is now on');
+
+        } else {
+            $('body').removeClass('contrast');
+            $(this).attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+            $(this).removeClass('switch');
+            sessionStorage.setItem('accessibility-contrast', 'off');
+            console.log('accessibility contrast is now off');
+        }
     
-    // return false;
-    // });
+    });
 
-    $('.text').on('click', function(){
-        if ($(this).attr('id') == "is_normal_fontsize") {
+
+    // set cookie variable in memory for accessibility fontsize
+    var accessibilityFont = sessionStorage.getItem('accessibility-fontsize');
+
+    // check to see if cookie exists and set to reflect current state
+    if (accessibilityFont === undefined || null || (window.sessionStorage && window.sessionStorage.getItem('accessability-fontsize') === '')) {
+          $('html').removeClass('fontsize');
+          $('.text').attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
+          sessionStorage.setItem('accessibility-fontsize', 'off');
+          console.log('accessibility font is now set to ' + accessibilityFont);
+      } else if (accessibilityFont == 'off') {
+          $('html').removeClass('fontsize');
+          $('.text').attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
+          sessionStorage.setItem('accessibility-fontsize', 'off');
+          console.log('accessibility font is now set to ' + accessibilityFont);
+      } else {
+          $('html').addClass('fontsize');
+          $('.text').attr('id', 'is_large_fontsize').attr('aria-pressed', true).addClass('active');
+          $('.text').addClass('switch');
+          sessionStorage.setItem('accessibility-fontsize', 'on');
+          console.log('accessibility font is turned ' + accessibilityFont); 
+      }
+      
+      
+    $('.text').on('click', function (){
+        if ($(this).attr('id') == 'is_normal_fontsize') {
             $('html').addClass('fontsize');
             $(this).attr('id', 'is_large_fontsize').attr('aria-pressed', true).addClass('active');
-            sessionStorage.setItem('accessible-fontsize', 'on');
+            $(this).addClass('switch');
+            sessionStorage.setItem('accessibility-fontsize', 'on');
+            console.log('accessibility font is now on');
+
         } else {
             $('html').removeClass('fontsize');
             $(this).attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
-            sessionStorage.setItem('accessible-fontsize', 'off');
+            sessionStorage.setItem('accessibility-fontsize', 'off');
+            $(this).removeClass('switch');
+            console.log('accessibility font is now off');
         }
     
-    return false;
     });
-
 
 
 });

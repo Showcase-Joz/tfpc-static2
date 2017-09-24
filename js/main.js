@@ -30,7 +30,7 @@ $(window).load(function() {
         // Special properties
         controlsContainer: "", //{UPDATED} Selector: USE CLASS SELECTOR. Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be ".flexslider-container". Property is ignored if given element is not found.
         manualControls: "", //Selector: Declare custom control navigation. Examples would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
-        sync: "", //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
+        sync: "", //{NEW} Selector: Mirror the actions perfor'accessibility-menu', 'up' on this slider with another slider. Use with care.
         asNavFor: "", //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
     });
 
@@ -74,7 +74,7 @@ $(window).load(function() {
         // Special properties
         controlsContainer: "", //{UPDATED} Selector: USE CLASS SELECTOR. Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be ".flexslider-container". Property is ignored if given element is not found.
         manualControls: "", //Selector: Declare custom control navigation. Examples would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
-        sync: "", //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
+        sync: "", //{NEW} Selector: Mirror the actions perfor'accessibility-menu', 'up' on this slider with another slider. Use with care.
         asNavFor: "", //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
     });
 
@@ -139,7 +139,7 @@ $(window).load(function() {
 });
 
 
-
+var accessibilityStorage = 
 
 /*global jQuery:false */
 jQuery(document).ready(function($) {
@@ -182,42 +182,50 @@ jQuery(document).ready(function($) {
         });
 
     // set cookie variable in memory
-    var accessabilityCookie = sessionStorage.getItem("accessibility-menu");
-    console.log(sessionStorage.getItem("accessibility-menu"));
+    var accessabilityCookie = localStorage.getItem('accessibility-menu');
 
     // check to see if cookie exixts and set .accessability-bound to reflect state
-    if (accessabilityCookie === null || (window.sessionStorage && window.sessionStorage.getItem('accessability-state') === 'down')) {
+    if (accessabilityCookie == null || (window.localStorage && window.localStorage.getItem('accessability-state') === '')) {
         $('.accessability-bound').slideDown();
+        // add click state option
         $('#show-accessability').attr('data-click-state', 0);
-        // sessionStorage.setItem("accessibility-menu","down");
-        // set text size feature assets
-        sessionStorage.setItem('accessible-fontsize', 'off');
+        // set session variables for accessibility box state and options
+        localStorage.setItem('accessibility-menu','down');
+        localStorage.setItem('accessibility-fontsize', 'off');
+        localStorage.setItem('accessibility-contrast', 'off');
+        // remove styling classes
         $('html').removeClass('fontsize');
+        $('body').removeClass('contrast');
+        $('.toggle-contrast').removeClass('switch');
+        $('.text').removeClass('switch');
         $('.text').attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
-        console.log('awesome, new user. pull menu down');
+        $('.toggle-contrast').attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+        console.log('awesome, new user. pull menu down and create fontsize & contrast variables');
 
-    } else if (accessabilityCookie === 'down') {
+    } else if (accessabilityCookie == 'down') {
+        // add click state option
         $('#show-accessability').attr('data-click-state', 0);
-        // sessionStorage.setItem("accessibility-menu","down");
+        // set session variable to down and update animations
+        localStorage.setItem('accessibility-menu', 'down');
         $('.accessability-bound').removeClass('bounceInDown');
         $('.accessability-bound').show();
         $('.accessibility-info').addClass('shine');
-        console.log('old user, already pulled menu down');
-        console.log(accessabilityCookie + ' test');
+        console.log('old user, already pulled menu down check fontsize & contrast variables');
 
     } else {
+        // add click state option
         $('#show-accessability').attr('data-click-state', 1);
+        // update animation and visual state
         $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
         $('.accessability-bound').slideToggle();
-        $('.accessability-bound').removeAttr("style");
-        // sessionStorage.setItem("accessibility-menu","up");
-        console.log('up awesome');
-        console.log(accessabilityCookie + ' test');
+        $('.accessability-bound').removeAttr('style');
+        // set session variable to up
+        localStorage.setItem('accessibility-menu', 'up');
+        console.log('accessibility menu is currently up');
     }
 
 
-
-    // toggle accessibiliy content adding cookie state
+   // toggle accessibiliy content adding cookie state
     $('#show-accessability').on('click', function() {
 
       // is data-click-state down? set it to up and update .accessability-bound to show this
@@ -225,8 +233,8 @@ jQuery(document).ready(function($) {
           $(this).attr('data-click-state', 1);
           $('#show-accessability').find('i').toggleClass('fa-wheelchair fa-universal-access');
           $('.accessability-bound').slideUp();
-          sessionStorage.setItem("accessibility-menu", "up");
-          console.log('up');
+          localStorage.setItem("accessibility-menu", "up");
+          console.log('accessibility menu up');
       } 
       // is data-click-state up? set it to down and update .accessability-bound to show this
       else if ($(this).attr('data-click-state') == 1) {
@@ -234,47 +242,102 @@ jQuery(document).ready(function($) {
           $('#show-accessability').find('i').toggleClass('fa-universal-access fa-wheelchair');
           $('.accessability-bound').slideDown();
           $('.accessability-bound').removeAttr("style");
-          sessionStorage.setItem("accessibility-menu", "down");
-          console.log('down this');
+          localStorage.setItem("accessibility-menu", "down");
+          console.log('accessibility menu down');
       }
     });
 
     
+    // set cookie variable in memory for accessibility contrast
+    var accessibilityContrast = localStorage.getItem('accessibility-contrast');
 
-    // $('.toggle-contrast').on('click', function (e) {
-    //     if ($(this).attr('id') == "is_normal_contrast") {
-    //         $('head').append($("<link href='" + a11y_stylesheet_path + "' id='highContrastStylesheet' rel='stylesheet' type='text/css' />"));
-    //         $('body').addClass('contrast');
-    //         $(this).attr('id', 'is_high_contrast').attr('aria-pressed', true).addClass('active');
-    //         createCookie('a11y-high-contrast', '1');
-    //     } else {
-    //         $('#highContrastStylesheet').remove();
-    //         $('body').removeClass('contrast');
-    //         $(this).attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
-    //         eraseCookie('a11y-high-contrast');
-    //     }
+    // check to see if cookie exists and set to reflect current state
+    if (accessibilityContrast === undefined || null || (window.localStorage && window.localStorage.getItem('accessability-contrast') === '')) {
+          $('body').removeClass('contrast');
+          $('.toggle-contrast').attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+          $('.toggle-contrast').removeClass('switch');
+          localStorage.setItem('accessibility-contrast', 'off');
+          console.log('accessibility contrast is now set to ' + accessibilityContrast);
+      } else if (accessibilityContrast == 'off') {
+          $('body').removeClass('contrast');
+          $('.toggle-contrast').attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+          localStorage.setItem('accessibility-contrast', 'off');
+          console.log('accessibility contrast is now set to ' + accessibilityContrast);
+      } else {
+          $('body').addClass('contrast');
+          $('.toggle-contrast').attr('id', 'is_high_contrast').attr('aria-pressed', true).addClass('active');
+          $('.toggle-contrast').addClass('switch');
+          localStorage.setItem('accessibility-contrast', 'on');
+          console.log('accessibility contrast is turned ' + accessibilityContrast);
+      }
+
+    $('.toggle-contrast').on('click', function () {
+        if ($(this).attr('id') == 'is_normal_contrast') {
+            $('body').addClass('contrast');
+            $(this).attr('id', 'is_high_contrast').attr('aria-pressed', true).addClass('active');
+            $(this).addClass('switch');
+            localStorage.setItem('accessibility-contrast', 'on');
+            console.log('accessibility contrast is now on');
+
+        } else {
+            $('body').removeClass('contrast');
+            $(this).attr('id', 'is_normal_contrast').attr('aria-pressed', false).removeClass('active');
+            $(this).removeClass('switch');
+            localStorage.setItem('accessibility-contrast', 'off');
+            console.log('accessibility contrast is now off');
+        }
     
-    // return false;
-    // });
+    });
 
-    $('.text').on('click', function(){
-        if ($(this).attr('id') == "is_normal_fontsize") {
+
+    // set cookie variable in memory for accessibility fontsize
+    var accessibilityFont = localStorage.getItem('accessibility-fontsize');
+
+    // check to see if cookie exists and set to reflect current state
+    if (accessibilityFont === undefined || null || (window.localStorage && window.localStorage.getItem('accessability-fontsize') === '')) {
+          $('html').removeClass('fontsize');
+          $('.text').attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
+          localStorage.setItem('accessibility-fontsize', 'off');
+          console.log('accessibility font is now set to ' + accessibilityFont);
+      } else if (accessibilityFont == 'off') {
+          $('html').removeClass('fontsize');
+          $('.text').attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
+          localStorage.setItem('accessibility-fontsize', 'off');
+          console.log('accessibility font is now set to ' + accessibilityFont);
+      } else {
+          $('html').addClass('fontsize');
+          $('.text').attr('id', 'is_large_fontsize').attr('aria-pressed', true).addClass('active');
+          $('.text').addClass('switch');
+          localStorage.setItem('accessibility-fontsize', 'on');
+          console.log('accessibility font is turned ' + accessibilityFont); 
+      }
+      
+      
+    $('.text').on('click', function (){
+        if ($(this).attr('id') == 'is_normal_fontsize') {
             $('html').addClass('fontsize');
             $(this).attr('id', 'is_large_fontsize').attr('aria-pressed', true).addClass('active');
-            sessionStorage.setItem('accessible-fontsize', 'on');
+            $(this).addClass('switch');
+            localStorage.setItem('accessibility-fontsize', 'on');
+            console.log('accessibility font is now on');
+
         } else {
             $('html').removeClass('fontsize');
             $(this).attr('id', 'is_normal_fontsize').attr('aria-pressed', false).removeClass('active');
-            sessionStorage.setItem('accessible-fontsize', 'off');
+            localStorage.setItem('accessibility-fontsize', 'off');
+            $(this).removeClass('switch');
+            console.log('accessibility font is now off');
         }
     
-    return false;
     });
 
 
 
-  });
 
+
+
+  });
+  
 
 
 //history back button action

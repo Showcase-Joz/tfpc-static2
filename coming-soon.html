@@ -173,7 +173,7 @@
                         <ul class="nav navbar-nav text-center">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="what-is-a-funeral-plan.html">What is a Funeral Plan</a></li>
-                            <li class="active except-this"><a href="#">Funeral Plans</a></li>
+                            <li class=""><a href="#">Funeral Plans</a></li>
                             <li class="dropdown">
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">About Us <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -206,25 +206,37 @@
                     <div class="accessability-box">
                         <h4 class="margin-bottom-20">Accessibility options</h4>
                         <div class="row margin-bottom-20 accessibility-panel">
-                            <div class="col-md-3">
-                                <i class="fa fa-text-height fa-fw fa-3x" aria-hidden="true" aria-label="Make text bigger"></i>
-                                <span>Bigger Text</span>
+                            <div id="is_normal_fontsize" class="col-md-3 text accessibility-panel-item">
+                              <span>
+                                <i class="fa fa-text-height fa-fw fa-3x" aria-labelledby="Make text bigger"></i>
+                                <span accesskey="t">Bigger Text<br/>
+                                  <i class="fa fa-keyboard-o fa-lg" aria-labelledby="press accesskey T to toggle larger text"> </i> ALT + T
+                                </span>
+                              </span>
                             </div>
-                            <div class="col-md-3">
+                            <div id="is_normal_contrast" class="col-md-3 toggle-contrast accessibility-panel-item">
+                              <span>
                                 <i class="fa fa-low-vision fa-fw fa-3x" aria-hidden="true" aria-label="High contrast colour scheme"></i>
-                                <span>High Contrast</span>
+                                <span accesskey="c">High Contrast</br>
+                                  <i class="fa fa-keyboard-o fa-lg" aria-labelledby="press accesskey c to toggle the high contrast theme"> </i> ALT + C
+                                </span>
+                              </span>
                             </div>
-                            <div class="col-md-3">
-                                <a href="#content">
-                                  <i class="fa fa-level-down fa-fw fa-3x" aria-hidden="true" aria-label="Skip to main content"></i>
-                                  <span>Go to Content</span>
-                                </a>
+                            <div class="col-md-3 accessibility-panel-item">
+                              <a href="#content">
+                                <i class="fa fa-level-down fa-fw fa-3x" aria-hidden="true" aria-label="Skip to main content"></i>
+                                <span accesskey="g">Go to Content</br>
+                                  <i class="fa fa-keyboard-o fa-lg" aria-labelledby="press accesskey g to skip to content"> </i> ALT + G
+                                </span>
+                              </a>
                             </div>
-                            <div class="col-md-3">
-                                <a href="tel:+448000987931">
-                                  <i class="fa fa-phone-square fa-fw fa-3x" aria-hidden="true" aria-label="Calls main Switchboard for assistance"></i>
-                                  <span>Switchboard</span>
-                                </a>
+                            <div class="col-md-3 accessibility-panel-item">
+                              <a href="tel:+448000987931">
+                                <i class="fa fa-phone-square fa-fw fa-3x" aria-hidden="true" aria-label="Calls main Switchboard for assistance"></i>
+                                <span accesskey="p">Switchboard</br>
+                                  <i class="fa fa-keyboard-o fa-lg" aria-labelledby="press accesskey p to call Switchboard"> </i> ALT + P
+                                </span>
+                              </a>
                             </div>
                         </div>
                     </div>
