@@ -39,4 +39,6 @@ This website was built with the intention of being upgraded to a dynamic website
 - Essential Scheme inclusion
 -- NAP details
 - Integrated online chat service
+- Best practice SEO
+- Social media metadata
 
