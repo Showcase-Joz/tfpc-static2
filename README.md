@@ -16,29 +16,27 @@ Old website:
 This website was built with the intention of being upgraded to a dynamic website at a point in the near future. Due to company structuring issues, the likelihood of this happening became less and less feasible. Therefore this website has been built with the intension of staying as a static site with the option of heavy javascripting to bring about greater user experience in the journey going forward.
 
 - Responsive Design - Bootstrap
-- 
+- Flyout Accessibility Options
+-- featuring an interactive UI
+-- keyboard support
+-- text size, high contrast, scroll to content and call office user-actions
+- UI (Quick Links) Panel 
+-- handing control to the user for UX
+-- offering user-friendly CTA features
+- Embedded Google Reviews through Google Places API
+- Chart.js responsive and interactive graph
+- FlexSlider integration
+- Split column text
+-- improved readability and UX
+- Specifically selected imagery
+-- Optimised
+- Varied use of SVG and Font Awesome icons
+- Moderate use of CSS Animations to improve UX
+- Overlay content areas adding value to the UX
+- Mailchimp integration
+- Local Storage provides improved UX for returning users
+- Extensive JSON-LD information
+- Essential Scheme inclusion
+-- NAP details
+- Integrated online chat service
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Showcase-Joz/tfpc-static2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
