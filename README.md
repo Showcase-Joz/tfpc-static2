@@ -13,10 +13,10 @@ Old website:
 
 ### Key features
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This website was built with the intention of being upgraded to a dynamic website at a point in the near future. Due to company structuring issues, the likelihood of this happening became less and less feasible. Therefore this website has been built with the intension of staying as a static site with the option of heavy javascripting to bring about greater user experience in the journey going forward.
 
-```markdown
-Syntax highlighted code block
+- Responsive Design - Bootstrap
+- 
 
 # Header 1
 ## Header 2
