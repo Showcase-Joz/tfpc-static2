@@ -1,8 +1,8 @@
 /*
   Author Name: Joz
   Author URI: http://showcaseimagery.com/
-  Note: 
-  ++Do not remove the back-link in this web template 
+  Note:
+  ++Do not remove the back-link in this web template
 
 -------------------------------------------------------*/
 
@@ -10,7 +10,7 @@
 /*
     Table of Content
 ==========================================
-    
+
     #Preloader
     #Basic Styles
     #Site Styles
@@ -27,7 +27,7 @@
     #Forms
     #Misc
     #Accessibility
-    #Media Queries 
+    #Media Queries
 
 */
 
@@ -47,8 +47,8 @@
 }
 
 #status {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     position: absolute;
     left: 50%;
     /* centers the loading animation horizontally one the screen */
@@ -72,7 +72,7 @@
     font-size: initial;
 }
 :focus {
-    outline: 0;    
+    outline: 0;
 
 }
 body {
@@ -152,7 +152,7 @@ section#content,
 
 
 
-/* SITE STYLES 
+/* SITE STYLES
 
 ++++++++++++  Palette color codes
   /* Palette URL: http://paletton.com/#uid=c1p4m2s5B0kfhxw4jP27qHbeJtFiHpX */
@@ -1169,7 +1169,7 @@ section#partners .partner-slider-controls .btn {
 
     .pricely-pro .panel-heading { border-right: 1px solid #ddd; border-top: 1px solid #ddd; }
     .pricely-pro li:first-child .panel-heading { border-left: 1px solid #ddd; }
-    
+
     .pricely-professional li.list-group-item  .feature-hide { display: none; }
     .pricely-professional li .fa { display: inline-block; }
     .pricely-professional li  .pricely-paragraph .fa { display: block; }
@@ -1729,7 +1729,7 @@ a.instruction:not(.focus) {
 /* LISTS */
 
 #large-list ul li {
-    font-family: 'Noto Sans', Arial, sans-serif; 
+    font-family: 'Noto Sans', Arial, sans-serif;
     font-size: larger;
 }
 
@@ -1743,7 +1743,7 @@ a.instruction:not(.focus) {
     top: -3px;
 }
 #large-list ul li span {
-  
+
 }
 
 /* IMAGES */
@@ -1881,95 +1881,95 @@ footer .footer-widget >ul >li >button:hover {
     padding: 20px 80px;
     text-align: right;
 }
-.btn-pride { 
-  color: #e9bf75; 
-  background-color: #2A6BA2; 
-  border-color: #2A6BA2; 
-} 
- 
-.btn-pride:hover, 
-.btn-pride:focus, 
-.btn-pride:active, 
-.btn-pride.active, 
-.open .dropdown-toggle.btn-pride { 
-  color: #e9bf75; 
-  background-color: #215785; 
-  border-color: #2A6BA2; 
-} 
- 
-.btn-pride:active, 
-.btn-pride.active, 
-.open .dropdown-toggle.btn-pride { 
-  background-image: none; 
-} 
- 
-.btn-pride.disabled, 
-.btn-pride[disabled], 
-fieldset[disabled] .btn-pride, 
-.btn-pride.disabled:hover, 
-.btn-pride[disabled]:hover, 
-fieldset[disabled] .btn-pride:hover, 
-.btn-pride.disabled:focus, 
-.btn-pride[disabled]:focus, 
-fieldset[disabled] .btn-pride:focus, 
-.btn-pride.disabled:active, 
-.btn-pride[disabled]:active, 
-fieldset[disabled] .btn-pride:active, 
-.btn-pride.disabled.active, 
-.btn-pride[disabled].active, 
-fieldset[disabled] .btn-pride.active { 
-  background-color: #2A6BA2; 
-  border-color: #2A6BA2; 
-} 
- 
-.btn-pride .badge { 
-  color: #2A6BA2; 
-  background-color: #e9bf75; 
+.btn-pride {
+  color: #e9bf75;
+  background-color: #2A6BA2;
+  border-color: #2A6BA2;
 }
-.btn-goldenleaves { 
-  color: #FFFFFF; 
-  background-color: #98012E; 
-  border-color: #98012E; 
-} 
- 
-.btn-goldenleaves:hover, 
-.btn-goldenleaves:focus, 
-.btn-goldenleaves:active, 
-.btn-goldenleaves.active, 
-.open .dropdown-toggle.btn-goldenleaves { 
-  color: #FFFFFF; 
-  background-color: #800227; 
-  border-color: #98012E; 
-} 
- 
-.btn-goldenleaves:active, 
-.btn-goldenleaves.active, 
-.open .dropdown-toggle.btn-goldenleaves { 
-  background-image: none; 
-} 
- 
-.btn-goldenleaves.disabled, 
-.btn-goldenleaves[disabled], 
-fieldset[disabled] .btn-goldenleaves, 
-.btn-goldenleaves.disabled:hover, 
-.btn-goldenleaves[disabled]:hover, 
-fieldset[disabled] .btn-goldenleaves:hover, 
-.btn-goldenleaves.disabled:focus, 
-.btn-goldenleaves[disabled]:focus, 
-fieldset[disabled] .btn-goldenleaves:focus, 
-.btn-goldenleaves.disabled:active, 
-.btn-goldenleaves[disabled]:active, 
-fieldset[disabled] .btn-goldenleaves:active, 
-.btn-goldenleaves.disabled.active, 
-.btn-goldenleaves[disabled].active, 
-fieldset[disabled] .btn-goldenleaves.active { 
-  background-color: #98012E; 
-  border-color: #98012E; 
-} 
- 
-.btn-goldenleaves .badge { 
-  color: #98012E; 
-  background-color: #FFFFFF; 
+
+.btn-pride:hover,
+.btn-pride:focus,
+.btn-pride:active,
+.btn-pride.active,
+.open .dropdown-toggle.btn-pride {
+  color: #e9bf75;
+  background-color: #215785;
+  border-color: #2A6BA2;
+}
+
+.btn-pride:active,
+.btn-pride.active,
+.open .dropdown-toggle.btn-pride {
+  background-image: none;
+}
+
+.btn-pride.disabled,
+.btn-pride[disabled],
+fieldset[disabled] .btn-pride,
+.btn-pride.disabled:hover,
+.btn-pride[disabled]:hover,
+fieldset[disabled] .btn-pride:hover,
+.btn-pride.disabled:focus,
+.btn-pride[disabled]:focus,
+fieldset[disabled] .btn-pride:focus,
+.btn-pride.disabled:active,
+.btn-pride[disabled]:active,
+fieldset[disabled] .btn-pride:active,
+.btn-pride.disabled.active,
+.btn-pride[disabled].active,
+fieldset[disabled] .btn-pride.active {
+  background-color: #2A6BA2;
+  border-color: #2A6BA2;
+}
+
+.btn-pride .badge {
+  color: #2A6BA2;
+  background-color: #e9bf75;
+}
+.btn-goldenleaves {
+  color: #FFFFFF;
+  background-color: #98012E;
+  border-color: #98012E;
+}
+
+.btn-goldenleaves:hover,
+.btn-goldenleaves:focus,
+.btn-goldenleaves:active,
+.btn-goldenleaves.active,
+.open .dropdown-toggle.btn-goldenleaves {
+  color: #FFFFFF;
+  background-color: #800227;
+  border-color: #98012E;
+}
+
+.btn-goldenleaves:active,
+.btn-goldenleaves.active,
+.open .dropdown-toggle.btn-goldenleaves {
+  background-image: none;
+}
+
+.btn-goldenleaves.disabled,
+.btn-goldenleaves[disabled],
+fieldset[disabled] .btn-goldenleaves,
+.btn-goldenleaves.disabled:hover,
+.btn-goldenleaves[disabled]:hover,
+fieldset[disabled] .btn-goldenleaves:hover,
+.btn-goldenleaves.disabled:focus,
+.btn-goldenleaves[disabled]:focus,
+fieldset[disabled] .btn-goldenleaves:focus,
+.btn-goldenleaves.disabled:active,
+.btn-goldenleaves[disabled]:active,
+fieldset[disabled] .btn-goldenleaves:active,
+.btn-goldenleaves.disabled.active,
+.btn-goldenleaves[disabled].active,
+fieldset[disabled] .btn-goldenleaves.active {
+  background-color: #98012E;
+  border-color: #98012E;
+}
+
+.btn-goldenleaves .badge {
+  color: #98012E;
+  background-color: #FFFFFF;
 }
 .btn-yellow {
     color: #959595;
@@ -2274,7 +2274,7 @@ footer .footer-widget button {
 }
 .shine {
     width:100%; /*Make sure the animation is over the whole element*/
- 
+
     -webkit-animation-name: shine;
     -webkit-animation-duration: 7s;
     -webkit-animation-iteration-count: 3;
@@ -2869,6 +2869,6 @@ body.contrast .flex-caption h2 {
 }
 
 @media (min-width: 1600px) {
-  
+
   .pricely-button .btn { font-size: initial; }
 }
