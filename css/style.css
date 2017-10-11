@@ -2520,6 +2520,7 @@ body.contrast .flex-caption h2 {
         padding-top: 0;
         padding-bottom: 0;
         margin-bottom: 0px;
+        margin-right: -15px;
     }
     section.top-controls div h5 {
         position: absolute;
