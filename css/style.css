@@ -139,12 +139,12 @@ details {
     position: relative;
 }
 
-section#content,
-.row.row-inner {
+section#content, .row.row-inner {
     padding-top: 0;
     padding-bottom: 0;
+    margin-bottom: -22px;
+    margin-right: 0px;
 }
-
 
 
 
@@ -900,7 +900,7 @@ header .navbar-default .navbar-nav>.open .dropdown-menu .nav-social-links {
 }
 
 .accessability-bound {
-    display: none;
+    display: initial;
 }
 
 
@@ -936,12 +936,13 @@ section.top-controls .left-border {
 section.top-controls div .top-control-item {
     padding-top: 20px;
     text-align: center;
+    padding-bottom: 10px;
 }
 section.top-controls div h5 {
     position: absolute;
-    bottom: 30%;
+    bottom: 35%;
     right: 0;
-    margin-right: -10px;
+    margin-right: -30px;
     transform: rotate(-90deg);
     text-transform: uppercase;
     color: #fff5c4;
@@ -974,6 +975,7 @@ section.top-controls div .top-control-item a:hover span,section.top-controls div
 section.top-controls div .top-control-item button {
   background-color: transparent;
   border: none;
+  margin-top: 0px;
 }
 
 section #content {
@@ -1308,7 +1310,6 @@ section #google-reviews {
     background: #ffe985;
     margin-bottom: 0px;
 }
-
 .flex-direction-nav .flex-prev {
     left: 0px;
 }
@@ -2438,6 +2439,13 @@ body.contrast .flex-caption h2 {
 }
 
 @media ( max-width:767px) {
+    .flexslider .slides img {
+        height: 100%;
+        display: block;
+    }
+    .accessability-bound {
+        display: none;
+    }
     .review-item {
         flex: 0 1 90%;
     }
@@ -2447,7 +2455,10 @@ body.contrast .flex-caption h2 {
     .container {
         width: 750px;
     }
-
+    .flexslider .slides img {
+        width: 100%;
+        display: block;
+    }
     .review-item {
         flex: 1 0 45%;
     }
@@ -2504,7 +2515,24 @@ body.contrast .flex-caption h2 {
     header .navbar-default .navbar-nav>.open .dropdown-menu .nav-social-links li:focus a i {
         color: #ffe985;
     }
-
+    section#content,
+    .row.row-inner {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0px;
+    }
+    section.top-controls div h5 {
+        position: absolute;
+        bottom: 30%;
+        right: 0;
+        margin-right: -10px;
+        transform: rotate(-90deg);
+        text-transform: uppercase;
+        color: #fff5c4;
+        font-size: x-small;
+        letter-spacing: 2px;
+        word-spacing: 0px;
+    }
     .flex-caption h2 {
         border-top-right-radius: 10px;
     }

@@ -139,7 +139,7 @@ $(window).load(function() {
 });
 
 
-var accessibilityStorage = 
+var accessibilityStorage =
 
 /*global jQuery:false */
 jQuery(document).ready(function($) {
@@ -235,7 +235,7 @@ jQuery(document).ready(function($) {
           $('.accessability-bound').slideUp();
           localStorage.setItem("accessibility-menu", "up");
           console.log('accessibility menu up');
-      } 
+      }
       // is data-click-state up? set it to down and update .accessability-bound to show this
       else if ($(this).attr('data-click-state') == 1) {
           $(this).attr('data-click-state', 0);
@@ -247,7 +247,7 @@ jQuery(document).ready(function($) {
       }
     });
 
-    
+
     // set cookie variable in memory for accessibility contrast
     var accessibilityContrast = localStorage.getItem('accessibility-contrast');
 
@@ -286,7 +286,7 @@ jQuery(document).ready(function($) {
             localStorage.setItem('accessibility-contrast', 'off');
             console.log('accessibility contrast is now off');
         }
-    
+
     });
 
 
@@ -309,10 +309,10 @@ jQuery(document).ready(function($) {
           $('.text').attr('id', 'is_large_fontsize').attr('aria-pressed', true).addClass('active');
           $('.text').addClass('switch');
           localStorage.setItem('accessibility-fontsize', 'on');
-          console.log('accessibility font is turned ' + accessibilityFont); 
+          console.log('accessibility font is turned ' + accessibilityFont);
       }
-      
-      
+
+
     $('.text').on('click', function (){
         if ($(this).attr('id') == 'is_normal_fontsize') {
             $('html').addClass('fontsize');
@@ -328,16 +328,18 @@ jQuery(document).ready(function($) {
             $(this).removeClass('switch');
             console.log('accessibility font is now off');
         }
-    
+
     });
 
-
-
-
-
+    if (screen.width < 767) {
+        $('.accessability-bound').hide();
+    }
+    else {
+        $('.accessability-bound').show();
+    }
 
   });
-  
+
 
 
 //history back button action
