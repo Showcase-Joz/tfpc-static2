@@ -2839,7 +2839,7 @@ body.contrast .flex-caption h2 {
     }
 
     section .interest-box img {
-        left: -30px;
+        /*left: -30px;*/
         width: auto;
         height: 100%;
     }
